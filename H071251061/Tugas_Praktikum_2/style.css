@@ -1,0 +1,378 @@
+/* ====================================================
+1. RESET & DASAR HALAMAN (Element Selector)
+==================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #fdfbf7;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e2d7cb;
+    margin: 30px 0;
+}
+
+/* ====================================================
+2. HEADER (Element & Box Model)
+==================================================== */
+header {
+    background-color: #1b3b36;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 4px solid #d4a373;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #f1ede4;
+}
+
+/* ====================================================
+3. NAVIGASI (Flexbox, Pseudo-class & Warna Bisque)
+==================================================== */
+nav {
+    background-color: bisque;
+    padding: 12px 20px;
+    border-bottom: 2px solid #e0c5a8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #4a3525;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #1b3b36;
+    color: #ffffff;
+}
+
+/* ====================================================
+4. KONTEN & SECTION (ID Selector & Box Model)
+==================================================== */
+section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid #ede4d8;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+section h2 {
+    color: #1b3b36;
+    border-bottom: 2px solid bisque;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#informasi p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* ====================================================
+5. GALERI FOTO (CSS Grid & Pseudo-class)
+==================================================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.gallery-card {
+    background: #fffaf5;
+    border: 1px solid #ebdcd0;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+.gallery-card figcaption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #665;
+}
+
+/* ====================================================
+6. DAFTAR AKTIVITAS
+==================================================== */
+#aktivitas ol {
+    padding-left: 20px;
+}
+
+#aktivitas li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+/* ====================================================
+7. PETA LOKASI & MULTIMEDIA
+==================================================== */
+.map-wrapper {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+#multimedia video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 10px;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+/* ====================================================
+8. TABEL OPERASIONAL (Box Model & Pseudo-class)
+=================================================== */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #e5d8c8;
+}
+
+table th {
+    background-color: bisque;
+    color: #3e2723;
+    font-weight: 700;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #faf5ee;
+}
+
+table tbody tr:hover {
+    background-color: #f3ece0;
+}
+
+/* ====================================================
+9. FORMULIR PEMESANAN (Box Model, Flexbox & Forms)
+=================================================== */
+fieldset {
+    border: 1px solid #dfcfbe;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fcfaf7;
+}
+
+legend {
+    font-weight: 700;
+    color: #1b3b36;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #1b3b36;
+    box-shadow: 0 0 5px rgba(27, 59, 54, 0.2);
+}
+
+.checkbox-group {
+    margin: 8px 0;
+}
+
+.checkbox-group label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 22px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #1b3b36;
+    color: #ffffff;
+}
+
+.btn-submit:hover {
+    background-color: #27564f;
+}
+
+.btn-reset {
+    background-color: bisque;
+    color: #4a3525;
+    border: 1px solid #e0c5a8;
+}
+
+.btn-reset:hover {
+    background-color: #ecd0ae;
+}
+
+#kontak ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#kontak li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+#kontak a {
+    color: #1b3b36;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#kontak a:hover {
+    text-decoration: underline;
+}
+
+/* ====================================================
+10. FOOTER (Element & Box Model)
+==================================================== */
+footer {
+    background-color: #1b3b36;
+    color: #f1ede4;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 30px;
+    border-top: 4px solid bisque;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin-bottom: 6px;
+}
+
+/* ====================================================
+11. RESPONSIVE DESIGN (Media Query)
+==================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .nav-list a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
