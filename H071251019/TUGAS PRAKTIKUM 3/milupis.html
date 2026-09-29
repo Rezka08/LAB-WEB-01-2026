@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milupis</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-w-80 font-sans text-lime-950 bg-yellow-50">
+<main id="beranda">
+
+    <!-- Menu -->
+    <header class="sticky top-0 z-40 border border-lime-200 bg-yellow-50">
+        <nav class="relative w-full max-w-6xl mx-auto px-6 h-20 flex items-center justify-between gap-8">
+            <a class="flex items-center gap-2 text-xl font-extrabold text-lime-950" href="#beranda">
+                <img class="w-10 h-10 rounded-xl border border-lime-200 bg-yellow-100 object-cover" src="assets/logo milupis.png" alt="Logo Milupis">
+                <span>MILUPIS</span>
+            </a>
+
+            <input id="nav-toggle" type="checkbox" class="peer sr-only">
+
+            <label for="nav-toggle" class="lg:hidden flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-lime-300 bg-white text-lime-950" aria-label="Buka menu">
+                <span class="flex flex-col gap-1.5">
+                    <span class="block h-0.5 w-5 rounded-full bg-current"></span>
+                    <span class="block h-0.5 w-5 rounded-full bg-current"></span>
+                    <span class="block h-0.5 w-5 rounded-full bg-current"></span>
+                </span>
+            </label>
+
+            <div class="hidden absolute left-0 right-0 top-full mt-2 border border-lime-200 bg-yellow-50 px-6 py-4 shadow-lg peer-checked:flex lg:static lg:flex lg:items-center lg:gap-8 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none lg:mt-0">
+                <div class="flex flex-col gap-4 text-sm font-medium lg:flex-row lg:items-center lg:gap-8">
+                    <a class="text-lime-950 hover:text-lime-400" href="#tentang">Tentang</a>
+                    <a class="text-lime-950 hover:text-lime-400" href="#keunggulan">Keunggulan</a>
+                    <a class="text-lime-950 hover:text-lime-400" href="#proses">Proses</a>
+                    <a class="text-lime-950 hover:text-lime-400" href="#dampak">Dampak</a>
+                </div>
+            </div>
+
+            <a class="hidden sm:flex items-center justify-center h-10 rounded-full px-4 text-lime-950 bg-yellow-300 text-sm font-bold hover:bg-yellow-400" href="https://wa.me/6285931253634" target="_blank">Pesan sekarang</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-12 py-12 lg:py-24">
+
+        <div>
+            <div class="flex items-center gap-2 text-lime-700 text-xs font-extrabold">
+                <span class="w-2 h-2 rounded-full bg-lime-400"></span>
+                INOVASI LEMBARAN ORGANIK PENYERAP MINYAK
+            </div>
+
+            <h1 class="max-w-xl mt-5 mb-6 text-5xl sm:text-7xl lg:text-8xl">
+                Gorengan nikmat,
+                <span class="block text-lime-700">bumi tetap sehat.</span>
+            </h1>
+
+            <p class="max-w-xl text-lime-800 text-base sm:text-lg">Lembaran penyerap minyak organik berbasis serat selulosa batang pisang dan tongkol jagung.</p>
+            <p class="max-w-xl text-lime-800 text-base sm:text-lg">Lebih kuat, food-grade, dan ramah lingkungan.</p>
+            <p class="max-w-xl text-lime-800 text-base sm:text-lg">TIM PKM-K UNIVERSITAS HASANUDDIN</p>
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8 mt-8">
+                <a class="flex items-center justify-center gap-3 h-12 rounded-full px-6 text-lime-950 bg-yellow-300 text-sm font-bold hover:bg-yellow-400" href="https://wa.me/6285931253634" target="_blank">
+                    Coba Milupis
+                    <span>→</span>
+                </a>
+                <a class="py-2 text-sm font-bold text-lime-950 hover:text-lime-700" href="#tentang">Kenali inovasinya</a>
+            </div>
+
+            <!-- angka singkat -->
+            <div class="grid grid-cols-2 sm:flex gap-3 sm:gap-8 mt-12">
+                <div class="flex flex-col gap-1 border-2 border-lime-400 rounded-lg px-4 py-2">
+                    <strong class="text-xl">30</strong>
+                    <span class="text-lime-700 text-xs">LEMBAR / BOX</span>
+                </div>
+                <div class="flex flex-col gap-1 border-2 border-lime-400 rounded-lg px-4 py-2">
+                    <strong class="text-xl">0,5 mm</strong>
+                    <span class="text-lime-700 text-xs">KETEBALAN</span>
+                </div>
+                <div class="flex flex-col gap-1 border-2 border-lime-400 rounded-lg px-4 py-2">
+                    <strong class="text-xl">314</strong>
+                    <span class="text-lime-700 text-xs">KEMASAN TERJUAL</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- gambar produk -->
+        <div>
+            <div class="bg-lime-700 rounded-3xl p-4 transition hover:shadow-lg hover:-translate-y-1">
+                <img class="w-full border-8 border-white rounded-3xl" src="assets/katalog-milupis.png" alt="Kemasan Milupis, lembaran peniris minyak, batang pisang, dan tongkol jagung">
+            </div>
+            <div class="flex flex-wrap gap-4 mt-4">
+                <div class="flex flex-col w-40 border border-lime-200 rounded-2xl px-4 py-3 bg-white text-xs">
+                    <span class="text-lime-700 text-base font-extrabold">100%</span>
+                    BAHAN ORGANIK
+                </div>
+                <div class="flex flex-col w-40 border border-lime-200 rounded-2xl px-4 py-3 bg-white text-xs">
+                    <span class="text-lime-700 text-base font-extrabold">Food-grade</span>
+                    AMAN UNTUK MAKANAN
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mengapa Milupis -->
+    <section class="text-white bg-lime-950">
+        <div class="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 items-start gap-8 lg:gap-14 py-12">
+            <div class="text-lime-400 text-4xl sm:text-5xl lg:text-3xl font-black leading-tight">MENGAPA MILUPIS ?</div>
+            <p class="text-lime-100">Konsumsi gorengan di Indonesia meningkat dari <strong class="text-white">45% pada 2018</strong> menjadi <strong class="text-white">51,6% pada 2023</strong>.</p>
+            <p class="text-lime-100">Sementara itu, minyak trans ditemukan pada <strong class="text-white">8,46% dari 130 makanan</strong> yang diuji.</p>
+        </div>
+    </section>
+
+    <!-- Tentang -->
+    <section class="w-full max-w-6xl mx-auto px-6 py-16 lg:py-24" id="tentang">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-end gap-6 lg:gap-20 mb-9 lg:mb-12">
+            <div>
+                <div class="text-lime-700 text-xs font-extrabold">BERAWAL DARI MASALAH NYATA</div>
+                <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl">Lembaran biasa belum bekerja sebaik yang kita butuhkan.</h2>
+            </div>
+            <p class="text-lime-800">Dari 143 responden, 94,6% menggunakan alas penyerap minyak konvensional, namun masih menemui berbagai kendala.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <article class="min-h-40 border border-lime-200 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                <strong class="block mb-10 text-lime-700 text-4xl">59,5%</strong>
+                <span class="text-sm font-semibold">Menempel pada makanan</span>
+            </article>
+            <article class="min-h-40 border border-lime-200 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                <strong class="block mb-10 text-lime-700 text-4xl">55,4%</strong>
+                <span class="text-sm font-semibold">Mudah sobek</span>
+            </article>
+            <article class="min-h-40 border border-lime-200 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                <strong class="block mb-10 text-lime-700 text-4xl">52,7%</strong>
+                <span class="text-sm font-semibold">Kurang efektif menyerap</span>
+            </article>
+            <article class="min-h-40 border border-lime-200 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                <strong class="block mb-10 text-lime-700 text-4xl">28,4%</strong>
+                <span class="text-sm font-semibold">Kapasitas lembaran rendah</span>
+            </article>
+        </div>
+    </section>
+
+    <!-- Keunggulan -->
+    <section class="bg-lime-100 py-16 lg:py-24" id="keunggulan">
+        <div class="w-full max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-end gap-6 lg:gap-20 mb-9 lg:mb-12">
+                <div>
+                    <div class="text-lime-700 text-xs font-extrabold">KECIL BENTUKNYA, BESAR MANFAATNYA</div>
+                    <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl">Lebih baik untuk makanan. Lebih baik untuk lingkungan.</h2>
+                </div>
+                <p class="text-lime-800">Milupis dirancang untuk kebutuhan rumah tangga dan pelaku usaha kuliner yang menginginkan solusi praktis sekaligus bertanggung jawab.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <article class="min-h-64 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full text-lime-950 bg-yellow-300 text-xs font-extrabold">01</span>
+                    <h3 class="mt-10 mb-3 text-xl">Daya serap tinggi</h3>
+                    <p class="text-lime-800 text-sm">Membantu meniriskan minyak dari gorengan dengan lebih efektif.</p>
+                </article>
+                <article class="min-h-64 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full text-lime-950 bg-yellow-300 text-xs font-extrabold">02</span>
+                    <h3 class="mt-10 mb-3 text-xl">Kuat dan praktis</h3>
+                    <p class="text-lime-800 text-sm">Tidak mudah sobek dan tidak menempel pada makanan.</p>
+                </article>
+                <article class="min-h-64 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full text-lime-950 bg-yellow-300 text-xs font-extrabold">03</span>
+                    <h3 class="mt-10 mb-3 text-xl">Food-grade</h3>
+                    <p class="text-lime-800 text-sm">Aman bersentuhan dengan makanan dan memiliki sifat antibakteri.</p>
+                </article>
+                <article class="min-h-64 rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full text-lime-950 bg-yellow-300 text-xs font-extrabold">04</span>
+                    <h3 class="mt-10 mb-3 text-xl">Organik & sirkular</h3>
+                    <p class="text-lime-800 text-sm">Memanfaatkan batang pisang dan tongkol jagung yang bernilai guna.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proses -->
+    <section class="w-full max-w-6xl mx-auto px-6 py-16 lg:py-24" id="proses">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24">
+            <div>
+                <div class="text-lime-700 text-xs font-extrabold">DARI LIMBAH MENJADI MANFAAT</div>
+                <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl">Tujuh langkah menuju lembaran organik.</h2>
+                <p class="mt-4 text-lime-800">Serat alami diproses secara terukur hingga siap menjadi lembaran peniris yang kuat dan aman digunakan.</p>
+                <a class="flex w-fit items-center justify-center gap-3 h-12 rounded-full px-6 mt-8 text-white bg-lime-950 text-sm font-bold hover:bg-lime-800" href="assets/milupis-poster.png" target="_blank">
+                    Lihat poster riset
+                    <span>↗</span>
+                </a>
+            </div>
+
+            <ol class="space-y-2">
+                <li class="flex items-center gap-4 h-20 border border-lime-200 px-4"><span class="text-lime-700 text-xs font-bold">01</span><strong class="text-xl">Persiapan bahan</strong></li>
+                <li class="flex items-center gap-4 h-20 border border-lime-200 px-4"><span class="text-lime-700 text-xs font-bold">02</span><strong class="text-xl">Pencucian</strong></li>
+                <li class="flex items-center gap-4 h-20 border border-lime-200 px-4"><span class="text-lime-700 text-xs font-bold">03</span><strong class="text-xl">Pemutihan</strong></li>
+                <li class="flex items-center gap-4 h-20 border border-lime-200 px-4"><span class="text-lime-700 text-xs font-bold">04</span><strong class="text-xl">Pembuatan pulp</strong></li>
+                <li class="flex items-center gap-4 h-20 border border-lime-200 px-4"><span class="text-lime-700 text-xs font-bold">05</span><strong class="text-xl">Pencetakan</strong></li>
+                <li class="flex items-center gap-4 h-20 border border-lime-200 px-4"><span class="text-lime-700 text-xs font-bold">06</span><strong class="text-xl">Pengeringan</strong></li>
+                <li class="flex items-center gap-4 h-20 border border-lime-200 px-4"><span class="text-lime-700 text-xs font-bold">07</span><strong class="text-xl">Pengemasan</strong></li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Perbandingan -->
+    <section class="text-white bg-lime-700 py-16 lg:py-24">
+        <div class="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-20">
+            <div>
+                <div class="text-yellow-300 text-xs font-extrabold">PILIHAN YANG UNGGUL</div>
+                <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl">Dirancang melampaui penyerap konvensional.</h2>
+                <p class="mt-4 text-lime-100">Keunggulan fungsi yang lengkap dengan harga tetap terjangkau untuk penggunaan harian.</p>
+                <div class="mt-10">
+                    <span class="block mb-1 text-lime-100 text-xs">MULAI DARI</span>
+                    <strong class="text-3xl">Rp30.000</strong>
+                    <small class="text-lime-100"> / box</small>
+                </div>
+            </div>
+
+            <div class="rounded-3xl bg-white p-2">
+                <table class="w-full text-lime-950 text-xs sm:text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-2/5 p-3 border border-lime-200 text-left text-xs">ASPEK</th>
+                            <th class="p-3 border border-lime-200 text-center text-xs bg-lime-100">MILUPIS</th>
+                            <th class="p-3 border border-lime-200 text-center text-xs">TISU DAPUR</th>
+                            <th class="p-3 border border-lime-200 text-center text-xs">KERTAS MINYAK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-3 border border-lime-200 text-left">Daya serap tinggi</td>
+                            <td class="p-3 border border-lime-200 bg-lime-100"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold text-lime-700 bg-lime-100">—</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-lime-200 text-left">Tidak mudah sobek</td>
+                            <td class="p-3 border border-lime-200 bg-lime-100"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold text-lime-700 bg-lime-100">—</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-lime-200 text-left">Food-grade &amp; ramah lingkungan</td>
+                            <td class="p-3 border border-lime-200 bg-lime-100"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-lime-200 text-left">Kapasitas lembaran tinggi</td>
+                            <td class="p-3 border border-lime-200 bg-lime-100"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold text-lime-700 bg-lime-100">—</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold text-lime-700 bg-lime-100">—</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-lime-200 text-left">Tidak menempel pada makanan</td>
+                            <td class="p-3 border border-lime-200 bg-lime-100"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold text-lime-700 bg-lime-100">—</span></td>
+                            <td class="p-3 border border-lime-200"><span class="flex w-7 h-7 mx-auto items-center justify-center rounded-full font-extrabold bg-lime-400">✓</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dampak -->
+    <section class="w-full max-w-6xl mx-auto px-6 py-16 lg:py-24" id="dampak">
+        <div class="rounded-3xl p-8 sm:p-14 text-white bg-lime-950">
+            <div class="text-lime-400 text-xs font-extrabold">DARI MAKASSAR UNTUK INDONESIA</div>
+            <h2 class="mt-3 max-w-xl text-3xl sm:text-4xl lg:text-5xl">Telah dipercaya di 8 kota dan kabupaten.</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-1 max-w-xl mt-12 rounded-2xl bg-lime-800">
+                <div class="flex flex-col p-6 bg-lime-900 rounded-2xl">
+                    <strong class="text-yellow-300 text-3xl">314</strong>
+                    <span class="text-lime-100 text-xs">kemasan terjual</span>
+                </div>
+                <div class="flex flex-col p-6 bg-lime-900 rounded-2xl">
+                    <strong class="text-yellow-300 text-3xl">8</strong>
+                    <span class="text-lime-100 text-xs">kota &amp; kabupaten</span>
+                </div>
+                <div class="flex flex-col p-6 bg-lime-900 rounded-2xl">
+                    <strong class="text-yellow-300 text-3xl">1,44</strong>
+                    <span class="text-lime-100 text-xs">B/C ratio</span>
+                </div>
+            </div>
+
+            <p class="max-w-xl mt-10 text-lg">
+                "Membantu mengurangi minyak pada makanan, lembarannya kuat dan tidak mudah robek."
+                <span class="block mt-2 text-lime-400 text-xs font-semibold">— Ibu Salbiah, Pengguna Milupis</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="pb-16 lg:pb-24">
+        <div class="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8 rounded-3xl px-6 lg:px-16 py-10 bg-yellow-300">
+            <div>
+                <div class="text-lime-700 text-xs font-extrabold">SAATNYA BERALIH</div>
+                <h2 class="mt-3 max-w-xl text-3xl sm:text-4xl lg:text-5xl">Tiriskan minyaknya, bukan kepeduliannya.</h2>
+                <p class="max-w-xl mt-4">Pilih lembaran peniris yang praktis untuk dapur dan lebih bijak untuk bumi.</p>
+            </div>
+            <a class="flex items-center justify-center gap-3 h-12 rounded-full px-6 text-white bg-lime-950 text-sm font-bold hover:bg-lime-800" href="https://wa.me/6285931253634" target="_blank">
+                Hubungi Milupis
+                <span>→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Tim -->
+    <section class="bg-lime-100 py-16 lg:py-24" id="tim">
+        <div class="w-full max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-end gap-6 lg:gap-20 mb-9 lg:mb-12">
+                <div>
+                    <div class="text-lime-700 text-xs font-extrabold">ORANG DI BALIK MILUPIS</div>
+                    <h2 class="mt-3 text-3xl sm:text-4xl lg:text-5xl">Tim Pengembang</h2>
+                </div>
+                <p class="text-lime-800">Lima mahasiswa dari berbagai program studi yang bekerja bersama menghadirkan Milupis.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <article class="rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <img class="w-full rounded-2xl" src="assets/syahwa.jpeg" alt="Syahwa Alifia Fatmawati. M">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full mt-5 text-lime-950 bg-yellow-300 text-xs font-extrabold">CFO</span>
+                    <h3 class="mt-4 mb-2 text-lg">Syahwa Alifia Fatmawati. M</h3>
+                    <p class="text-lime-800 text-sm"><em>Chief Financial Officer</em><br>Akuntansi</p>
+                </article>
+                <article class="rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <img class="w-full rounded-2xl" src="assets/issan.jpeg" alt="Ichsan Hasyim">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full mt-5 text-lime-950 bg-yellow-300 text-xs font-extrabold">COO</span>
+                    <h3 class="mt-4 mb-2 text-lg">Ichsan Hasyim</h3>
+                    <p class="text-lime-800 text-sm"><em>Chief Operating Officer</em><br>Teknik Industri</p>
+                </article>
+                <article class="rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <img class="w-full rounded-2xl" src="assets/muti.jpeg" alt="Syahirah Aisyah Muthiah Malebbi">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full mt-5 text-lime-950 bg-yellow-300 text-xs font-extrabold">CEO</span>
+                    <h3 class="mt-4 mb-2 text-lg">Syahirah Aisyah Muthiah Malebbi</h3>
+                    <p class="text-lime-800 text-sm"><em>Chief Executive Officer</em><br>Ilmu dan Teknologi Pangan</p>
+                </article>
+                <article class="rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <img class="w-full rounded-2xl" src="assets/friza.jpeg" alt="Friza Zahrah Fadhilah">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full mt-5 text-lime-950 bg-yellow-300 text-xs font-extrabold">CMO</span>
+                    <h3 class="mt-4 mb-2 text-lg">Friza Zahrah Fadhilah</h3>
+                    <p class="text-lime-800 text-sm"><em>Chief Marketing Officer</em><br>Kesehatan Masyarakat</p>
+                </article>
+                <article class="rounded-3xl p-6 bg-white hover:bg-yellow-50 transition hover:shadow-lg hover:-translate-y-1">
+                    <img class="w-full rounded-2xl" src="assets/fafa.jpeg" alt="Fadhiyah Syafika Firman">
+                    <span class="flex w-12 h-12 items-center justify-center rounded-full mt-5 text-lime-950 bg-yellow-300 text-xs font-extrabold">CTO</span>
+                    <h3 class="mt-4 mb-2 text-lg">Fadhiyah Syafikah Firman</h3>
+                    <p class="text-lime-800 text-sm"><em>Chief Technology Officer</em><br>Sistem Informasi</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border border-lime-200 py-12">
+        <div class="w-full max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-end gap-10">
+            <div>
+                <a class="flex items-center gap-2 text-xl font-extrabold text-lime-950" href="#beranda">
+                    <img class="w-10 h-10" src="assets/logo milupis.png" alt="Logo Milupis">
+                    <span>MILUPIS</span>
+                </a>
+                <p class="mt-3 text-lime-800 text-xs">Inovasi lembaran oragnik penyerap minyak.</p>
+            </div>
+
+            <div class="flex flex-row gap-1 text-xl">
+                <span class="mb-1 text-lime-700 text-xs">TERHUBUNG DENGAN KAMI</span>
+                <a href="https://instagram.com/selembarmilupis" aria-label="Instagram" target="_blank" class="grid h-10 w-10 place-items-center rounded-full text-neutral-400 ring-1 ring-white/20 transition duration-300 hover:bg-white hover:text-neutral-950 hover:ring-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                </a>
+                <a href="https://www.tiktok.com/@selembarmilupis" aria-label="TikTok" class="grid h-10 w-10 place-items-center rounded-full text-neutral-400 ring-1 ring-white/20 transition duration-300 hover:bg-white hover:text-neutral-950 hover:ring-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+            </a>
+              <a href="mailto:selembarmilupis@gmail.com" aria-label="Email" class="grid h-10 w-10 place-items-center rounded-full text-neutral-400 ring-1 ring-white/20 transition duration-300 hover:bg-white hover:text-neutral-950 hover:ring-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="m3 7 9 6 9-6"/>
+                </svg>
+              </a>            
+            </div>
+
+            <p class="text-left lg:text-right text-lime-800 text-xs sm:col-span-2 lg:col-span-1">© 2026 Milupis.<br>Fadhiyah Syafikah Firman(H071251019)</p>
+        </div>
+    </footer>
+
+</main>
+</body>
+</html>
