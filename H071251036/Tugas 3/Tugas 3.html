@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFuture 2026 - Event Teknologi Mahasiswa</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+
+    <div class="max-w-7xl mx-auto px-6 py-4">
+
+        <div class="flex justify-between items-center">
+
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold text-blue-600">
+                TechFuture 2026
+            </h1>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center gap-8">
+
+                <ul class="flex space-x-8 font-medium">
+                    <li>
+                        <a href="#home" class="hover:text-blue-600 transition">
+                            Beranda
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about" class="hover:text-blue-600 transition">
+                            Tentang
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#fitur" class="hover:text-blue-600 transition">
+                            Kegiatan
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#kontak" class="hover:text-blue-600 transition">
+                            Kontak
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#daftar"
+                   class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Daftar
+                </a>
+
+            </div>
+
+
+            <!-- Tombol Minimize -->
+            <button
+                id="menu-button"
+                class="md:hidden text-gray-700 text-3xl focus:outline-none">
+
+                ☰
+
+            </button>
+
+        </div>
+
+
+        <!-- Menu Mobile -->
+        <div id="mobile-menu"
+             class="hidden md:hidden mt-4 border-t pt-4">
+
+            <!-- Dibuat horizontal seperti desktop -->
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+
+                <a href="#home"
+                   class="hover:text-blue-600 transition">
+                    Beranda
+                </a>
+
+                <a href="#about"
+                   class="hover:text-blue-600 transition">
+                    Tentang
+                </a>
+
+                <a href="#fitur"
+                   class="hover:text-blue-600 transition">
+                    Kegiatan
+                </a>
+
+                <a href="#kontak"
+                   class="hover:text-blue-600 transition">
+                    Kontak
+                </a>
+
+                <a href="#daftar"
+                   class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Daftar
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- JavaScript Menu Minimize -->
+<script>
+
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", function () {
+
+        mobileMenu.classList.toggle("hidden");
+
+    });
+
+</script>
+```
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home"
+        class="min-h-screen flex items-center bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+            <div>
+
+                <h1 class="text-5xl font-bold mb-6">
+                    TechFuture 2026
+                </h1>
+
+                <p class="text-xl mb-6">
+                    Event teknologi terbesar untuk mahasiswa yang menghadirkan
+                    seminar, workshop, kompetisi, dan networking bersama praktisi industri.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+
+                    <a href="#daftar"
+                       class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                        Daftar Sekarang
+                    </a>
+
+                    <a href="#about"
+                       class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-700 transition">
+                        Pelajari Lebih Lanjut
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="flex justify-center">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+                    class="rounded-2xl shadow-2xl"
+                    alt="Teknologi">
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-20 bg-white">
+
+        <div class="max-w-6xl mx-auto px-6 text-center">
+
+            <h2 class="text-4xl font-bold mb-6">
+                Tentang Event
+            </h2>
+
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                TechFuture 2026 adalah event yang bertujuan meningkatkan wawasan
+                dan keterampilan mahasiswa dalam bidang teknologi informasi,
+                AI, pengembangan web, IoT, dan startup digital.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FITUR / KEGIATAN ================= -->
+    <section id="fitur" class="py-20 bg-gray-100">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-12">
+                Kegiatan Utama
+            </h2>
+
+            <!-- Grid System -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Seminar -->
+                <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+
+                    <div class="text-4xl mb-4">
+                        🎤
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Seminar Nasional
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Belajar dari pakar industri teknologi.
+                    </p>
+
+                </div>
+
+
+                <!-- Workshop -->
+                <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+
+                    <div class="text-4xl mb-4">
+                        💻
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Workshop
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Praktik langsung membuat proyek teknologi.
+                    </p>
+
+                </div>
+
+
+                <!-- Kompetisi -->
+                <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+
+                    <div class="text-4xl mb-4">
+                        🏆
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Kompetisi
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Hackathon dan lomba inovasi digital.
+                    </p>
+
+                </div>
+
+
+                <!-- Networking -->
+                <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+
+                    <div class="text-4xl mb-4">
+                        🤝
+                    </div>
+
+                    <h3 class="text-xl font-bold mb-3">
+                        Networking
+                    </h3>
+
+                    <p class="text-gray-600">
+                        Bertemu mahasiswa dan profesional.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TESTIMONI ================= -->
+    <section class="py-20 bg-white">
+
+        <div class="max-w-6xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-12">
+                Testimoni Peserta
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <div class="bg-gray-100 p-6 rounded-xl">
+                    <p class="italic">
+                        "Event ini menambah wawasan saya tentang AI dan startup."
+                    </p>
+
+                    <h4 class="mt-4 font-bold">
+                        - Andi, Mahasiswa SI
+                    </h4>
+                </div>
+
+
+                <div class="bg-gray-100 p-6 rounded-xl">
+                    <p class="italic">
+                        "Workshop sangat menarik dan mudah dipahami."
+                    </p>
+
+                    <h4 class="mt-4 font-bold">
+                        - Siti, Mahasiswa Informatika
+                    </h4>
+                </div>
+
+
+                <div class="bg-gray-100 p-6 rounded-xl">
+                    <p class="italic">
+                        "Saya mendapat banyak relasi baru."
+                    </p>
+
+                    <h4 class="mt-4 font-bold">
+                        - Budi, Mahasiswa Teknik
+                    </h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FORM PENDAFTARAN ================= -->
+    <section id="daftar" class="py-20 bg-blue-700 text-white">
+
+        <div class="max-w-xl mx-auto px-6">
+
+            <h2 class="text-4xl font-bold text-center mb-8">
+                Daftar Sekarang
+            </h2>
+
+            <form class="bg-white text-black p-8 rounded-2xl shadow-lg space-y-4">
+
+                <input
+                    type="text"
+                    placeholder="Nama Lengkap"
+                    class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500">
+
+                <input
+                    type="email"
+                    placeholder="Email"
+                    class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500">
+
+                <input
+                    type="text"
+                    placeholder="Universitas"
+                    class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500">
+
+                <select
+                    class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-blue-500">
+
+                    <option>Pilih Kegiatan</option>
+                    <option>Seminar</option>
+                    <option>Workshop</option>
+                    <option>Kompetisi</option>
+
+                </select>
+
+                <button
+                    type="button"
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+
+                    Kirim Pendaftaran
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="kontak" class="bg-gray-900 text-white py-10">
+
+        <div class="max-w-7xl mx-auto px-6 text-center">
+
+            <h3 class="text-2xl font-bold mb-4">
+                TechFuture 2026
+            </h3>
+
+            <p>
+                Email: info@techfuture.com
+            </p>
+
+            <p>
+                Instagram: @techfuture2026
+            </p>
+
+            <p class="mt-6 text-gray-400">
+                © 2026 TechFuture. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT MENU ================= -->
+    <script>
+
+        const menuButton = document.getElementById("menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        // Membuka / menutup menu mobile
+        menuButton.addEventListener("click", function () {
+
+            mobileMenu.classList.toggle("hidden");
+
+        });
+
+
+        // Menutup menu setelah memilih salah satu menu
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+
+        mobileLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mobileMenu.classList.add("hidden");
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
