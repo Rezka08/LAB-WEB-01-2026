@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JelajahNusantara - Komunitas Solo Traveler Lokal</title>
+    <!-- Tailwind CSS CDN versi 4 sesuai materi praktikum -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="font-sans bg-amber-50/50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white border-b border-amber-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative flex min-h-16 flex-wrap items-center justify-between">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-amber-700">JelajahNusantara</span>
+                </div>
+                <input type="checkbox" id="menu-toggle" class="peer/menu sr-only">
+                <label for="menu-toggle" aria-label="Buka atau tutup menu navigasi" class="cursor-pointer rounded p-2 text-gray-700 hover:bg-amber-50 focus-within:ring-2 focus-within:ring-amber-600 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </label>
+                <div class="absolute left-0 right-0 top-full z-50 hidden w-full flex-col gap-2 border-t border-amber-100 bg-white px-4 py-3 shadow-md peer-checked/menu:flex md:static md:z-auto md:flex md:w-auto md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:px-0 md:py-0 md:shadow-none">
+                    <a href="#beranda" class="text-gray-700 hover:text-amber-600 font-medium">Beranda</a>
+                    <a href="#tentang" class="text-gray-700 hover:text-amber-600 font-medium">Tentang</a>
+                    <a href="#fitur" class="text-gray-700 hover:text-amber-600 font-medium">Layanan</a>
+                    <a href="#testimoni" class="text-gray-700 hover:text-amber-600 font-medium">Testimoni</a>
+                    <a href="#kontak" class="text-gray-700 hover:text-amber-600 font-medium">Kontak</a>
+                    <a href="#pendaftaran" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg font-medium transition duration-200 shadow-sm">Gabung Komunitas</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-amber-800 text-white py-12 text-center shadow-inner">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-2">Komunitas Solo Traveler Lokal</h1>
+            <p class="text-lg text-amber-200 font-light">Wadah berbagi tips aman, itinerary, dan teman perjalanan bagi penjelajah Nusantara sendirian.</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="py-16 sm:py-24 bg-gradient-to-b from-amber-100/60 to-amber-50/30">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Jelajahi Indonesia Sendirian, Tapi Tidak Pernah Merasa Sendiri</h2>
+            <p class="text-base sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Temukan panduan perjalanan terpercaya, susunan rencana liburan hemat, serta rekan seperjalanan se-visi dari berbagai penjuru Indonesia.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                <a href="#pendaftaran" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-xl shadow transition duration-200">Daftar Sekarang</a>
+                <a href="#tentang" class="bg-white hover:bg-amber-50 text-amber-700 border border-amber-300 font-semibold px-6 py-3 rounded-xl transition duration-200">Pelajari Lebih Lanjut</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Tentang Komunitas Kami</h3>
+            <p class="text-gray-600 text-base sm:text-lg leading-relaxed">
+                JelajahNusantara didirikan sebagai rumah bagi para petualang mandiri yang gemar mengeksplorasi keindahan alam dan kebudayaan Indonesia seorang diri. Kami percaya bahwa solo traveling bukan berarti terisolasi, melainkan kesempatan emas untuk bertumbuh, memahami diri, dan terhubung dengan komunitas yang saling mendukung dalam keamanan, kenyamanan, serta pertukaran informasi rute perjalanan.
+            </p>
+        </div>
+    </section>
+
+    <!-- Fitur atau Manfaat (Menggunakan CSS Peer & Checkbox Tanpa JS) -->
+    <section id="fitur" class="py-16 bg-amber-50/40">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Manfaat & Layanan Utama</h3>
+                <p class="text-gray-600">Klik pada salah satu layanan di bawah untuk melihat informasi detail dan panduannya.</p>
+            </div>
+            
+            <!-- Checkbox tersembunyi sebagai pengendali state murni CSS -->
+            <input type="checkbox" id="toggle-1" class="peer/t1 hidden">
+            <input type="checkbox" id="toggle-2" class="peer/t2 hidden">
+            <input type="checkbox" id="toggle-3" class="peer/t3 hidden">
+
+            <!-- Grid System -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Layanan 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center font-bold text-xl mb-4">01</div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Tips & Panduan Keamanan</h4>
+                        <p class="text-gray-600 text-sm">Panduan praktis menjaga keselamatan diri, barang bawaan, serta trik menghadapi situasi darurat di berbagai destinasi terpencil.</p>
+                    </div>
+                    <div class="mt-6">
+                        <label for="toggle-1" class="cursor-pointer block text-center w-full bg-amber-100 hover:bg-amber-200 text-amber-800 font-semibold py-2 rounded-lg transition duration-200 text-sm">
+                            Lihat Detail Layanan
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Layanan 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center font-bold text-xl mb-4">02</div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Itinerary Hemat</h4>
+                        <p class="text-gray-600 text-sm">Kumpulan rencana perjalanan (itinerary) detail mulai dari 3 hari hingga 2 minggu yang telah diuji langsung oleh para solo traveler berpengalaman.</p>
+                    </div>
+                    <div class="mt-6">
+                        <label for="toggle-2" class="cursor-pointer block text-center w-full bg-amber-100 hover:bg-amber-200 text-amber-800 font-semibold py-2 rounded-lg transition duration-200 text-sm">
+                            Lihat Detail Layanan
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Layanan 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center font-bold text-xl mb-4">03</div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Teman Perjalanan</h4>
+                        <p class="text-gray-600 text-sm">Fitur dan grup diskusi untuk menemukan partner perjalanan yang memiliki jadwal dan destinasi searah guna menekan biaya transportasi.</p>
+                    </div>
+                    <div class="mt-6">
+                        <label for="toggle-3" class="cursor-pointer block text-center w-full bg-amber-100 hover:bg-amber-200 text-amber-800 font-semibold py-2 rounded-lg transition duration-200 text-sm">
+                            Lihat Detail Layanan
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Konten Detail Layanan 1 (Muncul saat toggle-1 dicentang) -->
+            <div id="detail-1" class="hidden peer-checked/t1:block mt-8 bg-white p-6 sm:p-8 rounded-2xl border-2 border-amber-300 shadow-md">
+                <div class="flex justify-between items-start mb-4">
+                    <h4 class="text-xl font-bold text-amber-900">Detail Layanan: Tips & Panduan Keamanan</h4>
+                    <label for="toggle-1" class="cursor-pointer text-gray-400 hover:text-gray-600 font-bold text-lg">&times;</label>
+                </div>
+                <p class="text-gray-700 mb-4">Keamanan adalah prioritas utama setiap solo traveler. Di layanan ini, anggota akan mendapatkan:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-600 text-sm sm:text-base">
+                    <li>Panduan darurat menghadapi cuaca buruk di jalan.</li>
+                    <li>Daftar kontak penting instansi darurat di berbagai daerah wisata Nusantara.</li>
+                </ul>
+            </div>
+
+            <!-- Tab Konten Detail Layanan 2 (Muncul saat toggle-2 dicentang) -->
+            <div id="detail-2" class="hidden peer-checked/t2:block mt-8 bg-white p-6 sm:p-8 rounded-2xl border-2 border-amber-300 shadow-md">
+                <div class="flex justify-between items-start mb-4">
+                    <h4 class="text-xl font-bold text-amber-900">Detail Layanan: Itinerary Hemat</h4>
+                    <label for="toggle-2" class="cursor-pointer text-gray-400 hover:text-gray-600 font-bold text-lg">&times;</label>
+                </div>
+                <p class="text-gray-700 mb-4">Tidak perlu pusing merencanakan rute dari nol. Melalui layanan ini Anda memperoleh:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-600 text-sm sm:text-base">
+                    <li>Rencana perjalanan harian lengkap dengan estimasi budget akurat untuk destinasi populer.</li>
+                    <li>Rekomendasi penginapan <em>backpacking</em> yang bersih, aman, dan ramah kantong.</li>
+                </ul>
+            </div>
+
+            <!-- Tab Konten Detail Layanan 3 (Muncul saat toggle-3 dicentang) -->
+            <div id="detail-3" class="hidden peer-checked/t3:block mt-8 bg-white p-6 sm:p-8 rounded-2xl border-2 border-amber-300 shadow-md">
+                <div class="flex justify-between items-start mb-4">
+                    <h4 class="text-xl font-bold text-amber-900">Detail Layanan: Teman Perjalanan (Buddy Finder)</h4>
+                    <label for="toggle-3" class="cursor-pointer text-gray-400 hover:text-gray-600 font-bold text-lg">&times;</label>
+                </div>
+                <p class="text-gray-700 mb-4">Ingin patungan sewa mobil atau sewa perahu tapi berangkat sendirian? Layanan ini menyediakan:</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-600 text-sm sm:text-base">
+                    <li>Papan informasi terbuka pencarian teman dengan jadwal liburan yang sama.</li>
+                    <li>Verifikasi profil anggota untuk memastikan keamanan dan kenyamanan bersama.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section id="testimoni" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Testimoni Anggota</h3>
+                <p class="text-gray-600">Cerita seru dari para penjelajah yang telah bergabung bersama kami.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-amber-50/60 p-6 rounded-2xl border border-amber-200">
+                    <p class="text-gray-700 italic mb-4">"Berkat panduan itinerary dari komunitas ini, perjalanan solo pertama saya ke Labuan Bajo berjalan sangat mulus, aman, dan jauh lebih hemat dari perkiraan!"</p>
+                    <h5 class="font-bold text-gray-900">- Rian Pratama, Solo Traveler</h5>
+                </div>
+                <div class="bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                    <p class="text-gray-700 italic mb-4">"Ketemu teman satu jalur pendakian Rinjani lewat grup komunitas ini. Seru banget, jadi punya keluarga baru sesama pecinta alam."</p>
+                    <h5 class="font-bold text-gray-900">- Siska Lestari, Backpacker</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Pendaftaran -->
+    <section id="pendaftaran" class="py-16 bg-amber-50/40">
+        <div class="max-w-xl mx-auto px-4 bg-white p-8 rounded-2xl border border-amber-200 shadow-sm">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Gabung Komunitas Sekarang</h3>
+                <p class="text-gray-600 text-sm">Isi data diri Anda untuk mendapatkan update itinerary dan akses grup eksklusif.</p>
+            </div>
+            <form onsubmit="event.preventDefault();" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                    <input type="text" class="w-full border border-gray-300 focus:border-amber-500 focus:outline-none p-2 rounded-lg" placeholder="Masukkan nama lengkap">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Email Aktif</label>
+                    <input type="email" class="w-full border border-gray-300 focus:border-amber-500 focus:outline-none p-2 rounded-lg" placeholder="nama@email.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Destinasi Impian</label>
+                    <input type="text" class="w-full border border-gray-300 focus:border-amber-500 focus:outline-none p-2 rounded-lg" placeholder="Misal: Raja Ampat, Bromo, Bali">
+                </div>
+                <button class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 rounded-lg transition duration-200 shadow-sm">Daftar Sekarang</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-xl font-bold mb-4 text-amber-400">JelajahNusantara</h4>
+                <p class="text-gray-400 text-sm">Wadah terpercaya bagi para solo traveler Indonesia untuk berbagi tips, itinerary, dan menemukan teman seperjalanan yang aman dan menyenangkan.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-amber-400">Kontak Kami</h4>
+                <p class="text-gray-400 text-sm mb-2">Email: halo@jelajahnusantara.id</p>
+                <p class="text-gray-400 text-sm mb-2">WhatsApp: +62 812-3456-7890</p>
+                <p class="text-gray-400 text-sm">Lokasi: Jakarta Selatan, Indonesia</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4 text-amber-400">Media Sosial</h4>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Instagram" class="grid h-10 w-10 place-items-center rounded-full text-neutral-400 ring-1 ring-white/20 transition duration-300 hover:bg-white hover:text-neutral-950 hover:ring-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok" class="grid h-10 w-10 place-items-center rounded-full text-neutral-400 ring-1 ring-white/20 transition duration-300 hover:bg-white hover:text-neutral-950 hover:ring-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube" class="grid h-10 w-10 place-items-center rounded-full text-neutral-400 ring-1 ring-white/20 transition duration-300 hover:bg-white hover:text-neutral-950 hover:ring-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+            &copy; 2026 JelajahNusantara. Hak Cipta Dilindungi.
+        </div>
+    </footer>
+
+</body>
+</html>
