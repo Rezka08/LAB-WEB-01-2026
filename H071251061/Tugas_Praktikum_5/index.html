@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papan Tugas Tim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen text-slate-800 font-sans p-6 md:p-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+        
+        <aside class="md:col-span-4 bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 space-y-4">
+            <div>
+                <h1 class="text-xl font-bold text-slate-900 tracking-tight">Tim Marsha</h1>
+                <p class="text-xs font-medium text-slate-400 uppercase tracking-wider mt-3">Anggota</p>
+            </div>
+            
+            <div id="loading-members" class="text-sm text-slate-500 py-2">Memuat anggota...</div>
+            <div id="error-members" class="text-sm text-red-500 hidden py-2"></div>
+            
+            <div id="members-list" class="space-y-1"></div>
+        </aside>
+
+        <main class="md:col-span-8 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200/80 space-y-6">
+            
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-2">
+                <div>
+                    <h2 id="task-title" class="text-2xl font-bold text-slate-900">Pilih Anggota Tim</h2>
+                    <p id="task-summary" class="text-sm font-medium text-slate-500 mt-1 hidden">
+                        0 dari 0 tugas selesai
+                    </p>
+                </div>
+                <div id="progress-container" class="w-full sm:w-48 bg-slate-100 h-2.5 rounded-full overflow-hidden hidden">
+                    <div id="progress-bar" class="bg-emerald-500 h-full w-0 transition-all duration-300"></div>
+                </div>
+            </div>
+
+            <div id="loading-tasks" class="text-sm text-slate-500 hidden py-4">Memuat tugas...</div>
+            <div id="error-tasks" class="text-sm text-red-500 hidden py-4"></div>
+
+            <div id="placeholder-message" class="text-slate-400 text-center py-16 text-sm">
+                Silakan klik salah satu nama anggota tim untuk melihat tugas.
+            </div>
+
+            <div id="task-controls" class="space-y-6 hidden">
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-start">
+                    
+                    <div class="md:col-span-5 relative">
+                        <input type="text" id="search-input" placeholder="Cari tugas..." class="w-full pl-3 pr-8 py-2 border border-slate-300 rounded-lg text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                        <button type="button" id="clear-search-btn" class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs hidden font-bold">✕</button>
+                    </div>
+
+                    <form id="add-task-form" class="md:col-span-7 flex flex-col gap-2">
+                        <div class="flex gap-2">
+                            <input type="text" id="task-input" placeholder="Tambah tugas baru, minimal 5 karakter" class="flex-1 px-3 py-2 border border-slate-200 rounded-lg text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                            <button type="submit" id="submit-btn" class="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg text-sm transition-colors flex-shrink-0">
+                                Simpan
+                            </button>
+                        </div>
+                        <div id="form-error" class="text-xs text-red-500 hidden"></div>
+                        <div id="form-success" class="text-xs text-emerald-700 bg-emerald-50 p-2 rounded-lg border border-emerald-200 hidden"></div>
+                    </form>
+
+                </div>
+
+                <div class="border-t border-slate-100 pt-2">
+                    <div id="no-match-message" class="text-sm text-slate-500 italic hidden py-6 text-center">Tidak ada tugas yang cocok.</div>
+                    <ul id="tasks-list" class="divide-y divide-slate-100"></ul>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
