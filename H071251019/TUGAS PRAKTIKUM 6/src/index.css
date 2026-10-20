@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fredoka", ui-rounded, "Nunito", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --animate-typing-role: typing-role 18s steps(26, end) infinite;
+
+  --color-ink: #121a3d;
+  --color-navy: #1d2b5f;
+  --color-royal: #3b62c6;
+  --color-mist: #9db4d8;
+  --color-sky: #d3e2f6;
+  --color-fox: #f28b30;
+  --color-copper: #c0703f;
+  --color-crimson: #e8102f;
+  --color-cream: #fbf7f0;
+
+
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-sway: sway 4s ease-in-out infinite;
+  --animate-jiggle: jiggle 0.55s ease-in-out infinite;
+  --animate-heartbeat: heartbeat 1.6s ease-in-out infinite;
+  --animate-pop: pop 3.6s ease-in-out infinite;
+  --animate-blob: blob 9s ease-in-out infinite;
+  --animate-spin-slow: spin 22s linear infinite;
+  --animate-marquee: marquee 26s linear infinite;
+  --animate-typing: typing 8s steps(30, end) infinite;
+  --animate-shimmer: shimmer 5s linear infinite;
+  --animate-drop-in: drop-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-rise: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-ping-soft: ping-soft 1.8s ease-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-16px) rotate(2deg); }
+  }
+  @keyframes sway {
+    0%, 100% { transform: rotate(-4deg); }
+    50% { transform: rotate(4deg); }
+  }
+  @keyframes jiggle {
+    0%, 100% { transform: rotate(-7deg) scale(1.04); }
+    50% { transform: rotate(7deg) scale(1.08); }
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.18); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.12); }
+  }
+  @keyframes pop {
+    0%, 100% { transform: scale(0.94) rotate(-1.5deg); }
+    50% { transform: scale(1.06) rotate(1.5deg); }
+  }
+  @keyframes blob {
+    0%, 100% { border-radius: 58% 42% 55% 45% / 52% 48% 56% 44%; }
+    33% { border-radius: 44% 56% 42% 58% / 58% 42% 54% 46%; }
+    66% { border-radius: 52% 48% 60% 40% / 44% 58% 42% 56%; }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes typing {
+    0% { clip-path: inset(0 100% 0 0); }
+    35%, 70% { clip-path: inset(0 0 0 0); }
+    90%, 100% { clip-path: inset(0 100% 0 0); }
+  }
+
+  @keyframes typing-role {
+  0% { clip-path: inset(0 100% 0 0); }
+  8%, 28% { clip-path: inset(0 0 0 0); }
+  33%, 100% { clip-path: inset(0 100% 0 0); }
+  } 
+
+  @keyframes shimmer {
+    from { background-position: 0% 50%; }
+    to { background-position: 200% 50%; }
+  }
+  @keyframes drop-in {
+    from { opacity: 0; transform: translateY(-28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(32px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes ping-soft {
+    0% { transform: scale(1); opacity: 0.7; }
+    80%, 100% { transform: scale(2.6); opacity: 0; }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: linear-gradient(180deg, #dbe8f7 0%, #c6d8ee 45%, #e6edf8 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-fox);
+    color: white;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-fox);
+    outline-offset: 3px;
+  }
+}
+
+@keyframes reveal {
+  from { opacity: 0; translate: 0 48px; scale: 0.96; }
+  to { opacity: 1; translate: 0 0; scale: 1; }
+}
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
