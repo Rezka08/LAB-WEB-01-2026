@@ -1,0 +1,41 @@
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    /* Background Dot Grid Pattern */
+    .bg-dot-pattern {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.12) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+    }
+
+    .dark .bg-dot-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+    }
+
+    @keyframes marqueeLeft {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+    }
+
+    @keyframes marqueeRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+    }
+
+    .animate-marquee-left {
+    display: flex;
+    width: max-content;
+    animation: marqueeLeft 25s linear infinite;
+    }
+
+    .animate-marquee-right {
+    display: flex;
+    width: max-content;
+    animation: marqueeRight 25s linear infinite;
+    }
+
+    .animate-marquee-left:hover,
+    .animate-marquee-right:hover {
+    animation-play-state: paused;
+    }
