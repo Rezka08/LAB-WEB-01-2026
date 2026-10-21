@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tambahan opsional agar saat klik menu, scroll-nya halus */
+html {
+  scroll-behavior: smooth;
+}
