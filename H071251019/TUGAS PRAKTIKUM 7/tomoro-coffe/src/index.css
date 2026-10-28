@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-orange-pumpkin: #F3722C;
+  --color-orange-tua: #C9540F;
+  --color-arang: #1B1B1B;
+  --color-krem: #F6F3EE;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
