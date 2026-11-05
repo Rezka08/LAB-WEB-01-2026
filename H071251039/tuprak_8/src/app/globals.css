@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-paper: #fff4d6;
+  --color-ink: #111111;
+  --color-surface: #ffffff;
+  --color-on-fill: #111111;
+  --color-shadow: #111111;
+
+  --color-sun: #ffd23f;
+  --color-volt: #c6ff3d;
+  --color-cobalt: #3d5cff;
+  --color-bubble: #ff8fd0;
+  --color-mint: #8df2d0;
+  --color-coral: #ff5c5c;
+
+  --p-dot: rgb(17 17 17 / 0.14);
+}
+
+.dark {
+  --color-paper: #14121f;
+  --color-surface: #1f1c2e;
+  --color-ink: #f5f0e1;
+  --color-on-fill: #111111;
+  --color-shadow: #5b4f8f;
+
+  --color-sun: #ffd23f;
+  --color-volt: #c6ff3d;
+  --color-cobalt: #6e8bff;
+  --color-bubble: #ff8fd0;
+  --color-mint: #8df2d0;
+  --color-coral: #ff6b6b;
+
+  --p-dot: rgb(91 79 143 / 0.25);
+}
+
+@theme {
+  --color-paper: var(--color-paper);
+  --color-ink: var(--color-ink);
+  --color-surface: var(--color-surface);
+  --color-card: var(--color-surface);
+  --color-on-fill: var(--color-on-fill);
+  --color-shadow: var(--color-shadow);
+
+  --color-sun: var(--color-sun);
+  --color-volt: var(--color-volt);
+  --color-cobalt: var(--color-cobalt);
+  --color-bubble: var(--color-bubble);
+  --color-mint: var(--color-mint);
+  --color-coral: var(--color-coral);
+
+  --shadow-brut-sm: 3px 3px 0 0 var(--color-shadow);
+  --shadow-brut: 6px 6px 0 0 var(--color-shadow);
+  --shadow-brut-lg: 10px 10px 0 0 var(--color-shadow);
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    background-image: radial-gradient(var(--p-dot) 1px, transparent 1px);
+    background-size: 22px 22px;
+    color: var(--color-ink);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  ::selection {
+    background: var(--color-sun);
+    color: var(--color-on-fill);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-cobalt);
+    outline-offset: 3px;
+  }
+
+  select option {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+  }
+
+  /* Instantly disable splash animation on 404 pages */
+  body:has([data-page="404"]) .splash-overlay {
+    display: none !important;
+  }
+
+  body:has([data-page="404"]) .splash-content-hidden {
+    opacity: 1 !important;
+  }
+}
