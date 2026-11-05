@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <div className="mx-auto max-w-xl py-20 text-center"><p className="text-5xl">📚</p><h1 className="mt-5 font-serif text-4xl font-bold text-[#493326]">Buku belum ditemukan</h1><p className="mt-3 text-[#827161]">Sepertinya buku yang kamu cari belum ada di rak kami.</p><Link href="/katalog" className="mt-7 inline-flex rounded-full bg-[#493326] px-6 py-3 text-sm font-bold text-white">Kembali ke katalog</Link></div>; }
