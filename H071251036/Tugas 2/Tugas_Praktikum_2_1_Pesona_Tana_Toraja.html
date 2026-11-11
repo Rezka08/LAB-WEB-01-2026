@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Pesona Tana Toraja</title>
+
+<style>
+/* ==================== CSS AS SKIN ==================== */
+
+/* Element selector */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    color: #3d2b20;
+    background: #f7f1e8;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ID selector */
+#beranda {
+    text-align: center;
+}
+
+#tentang ul,
+#aktivitas ol {
+    padding-left: 25px;
+}
+
+/* Header */
+header {
+    padding: 70px 20px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(rgba(54, 36, 24, .70), rgba(54, 36, 24, .70)),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2yAmuQll5jX9uBMcuPbrgTcZMpxc97Cvk-mTWFPNdMA&s=10")
+        center/cover;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    text-shadow: 2px 3px 6px rgba(0,0,0,.4);
+}
+
+header p {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+/* Navigation - Flexbox */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 12px 20px;
+    background: #5b3926;
+    box-shadow: 0 3px 12px rgba(0,0,0,.18);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: .25s ease;
+}
+
+/* Pseudo-class */
+nav a:hover {
+    background: #d89b4a;
+    transform: translateY(-2px);
+}
+
+/* Main and Box Model */
+main {
+    width: min(1100px, 92%);
+    margin: 35px auto;
+}
+
+.section-card {
+    margin: 0 0 28px;
+    padding: 32px;
+    border: 1px solid #e5d3bd;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(71,47,30,.08);
+}
+
+.section-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #75451f;
+    text-align: center;
+}
+
+.hero-image {
+    display: block;
+    width: min(600px, 100%);
+    height: 320px;
+    object-fit: cover;
+    margin: 0 auto 25px;
+    border: 5px solid #fff;
+    border-radius: 16px;
+    box-shadow: 0 7px 18px rgba(0,0,0,.15);
+}
+
+/* Class selector */
+.info-list li,
+.activity-list li {
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border-left: 4px solid #c47b35;
+    background: #fff8ef;
+    border-radius: 6px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery figure {
+    flex: 1 1 280px;
+    max-width: 320px;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #ead9c7;
+    border-radius: 14px;
+    background: #fffaf5;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 18px rgba(0,0,0,.18);
+}
+
+figcaption {
+    padding-top: 8px;
+    font-weight: 600;
+    color: #704529;
+}
+
+/* Activity */
+.activity-list {
+    margin: 0;
+}
+
+/* Map and video */
+.media-frame {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.14);
+}
+
+.map-frame {
+    height: 400px;
+}
+
+.video-frame {
+    height: 395px;
+}
+
+/* Table */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow: hidden;
+    border: 1px solid #d9c2a9;
+}
+
+.info-table th {
+    padding: 13px;
+    color: white;
+    background: #75451f;
+    text-align: left;
+}
+
+.info-table td {
+    padding: 12px;
+    border-top: 1px solid #ead8c5;
+}
+
+.info-table tbody tr:nth-child(even) {
+    background: #fff8ef;
+}
+
+.info-table tbody tr:hover {
+    background: #f4e2cc;
+}
+
+/* Form */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+form p {
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 11px 13px;
+    border: 1px solid #d5bea5;
+    border-radius: 9px;
+    font: inherit;
+    background: #fff;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #c47b35;
+    box-shadow: 0 0 0 3px rgba(196,123,53,.15);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-button {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 10px 22px;
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    background: #75451f;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.form-button:hover {
+    background: #c47b35;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    padding: 28px 20px;
+    color: white;
+    text-align: center;
+    background: #3b271b;
+}
+
+footer hr {
+    max-width: 900px;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,.25);
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    header {
+        padding: 50px 15px;
+    }
+
+    nav ul {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: .9rem;
+    }
+
+    main {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    .section-card {
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    .hero-image {
+        height: 230px;
+    }
+
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery figure {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .map-frame {
+        height: 300px;
+    }
+
+    .video-frame {
+        height: 250px;
+    }
+
+    .info-table {
+        font-size: .9rem;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header>
+        <h1>Pesona Tana Toraja</h1>
+
+        <p>
+            Jelajahi keindahan alam, budaya, dan tradisi
+            Tana Toraja, Sulawesi Selatan.
+        </p>
+    </header>
+
+
+    <!-- ==================== NAVIGASI ==================== -->
+    <nav>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#aktivitas">Aktivitas</a></li>
+            <li><a href="#lokasi">Lokasi</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+
+        <!-- ==================== INFORMASI UTAMA ==================== -->
+        <section id="beranda" class="section-card">
+
+            <h2>Selamat Datang di Tana Toraja</h2>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2yAmuQll5jX9uBMcuPbrgTcZMpxc97Cvk-mTWFPNdMA&s=10"
+                alt="Rumah adat Tongkonan Tana Toraja" width="600" class="hero-image">
+
+            <p>
+                Tana Toraja merupakan salah satu daerah wisata budaya
+                yang terkenal di Sulawesi Selatan. Wilayah ini memiliki
+                keunikan budaya, rumah adat Tongkonan, serta pemandangan
+                alam pegunungan yang menarik untuk dikunjungi.
+            </p>
+
+            <p>
+                Tana Toraja menjadi tempat yang menarik bagi wisatawan
+                yang ingin mengenal kebudayaan dan tradisi masyarakat
+                Toraja serta menikmati keindahan alamnya.
+            </p>
+
+        </section>
+
+
+        <!-- ==================== TENTANG TANA TORAJA ==================== -->
+        <section id="tentang" class="section-card">
+
+            <h2>Tentang Tana Toraja</h2>
+
+            <p>
+                Tana Toraja berada di Provinsi Sulawesi Selatan.
+                Daerah ini dikenal karena kebudayaan Toraja yang
+                masih menjadi bagian penting dalam kehidupan masyarakat.
+            </p>
+
+            <h3>Keunikan Tana Toraja</h3>
+
+            <ul class="info-list">
+                <li>Rumah adat Tongkonan</li>
+                <li>Budaya dan tradisi masyarakat Toraja</li>
+                <li>Pemandangan alam pegunungan</li>
+                <li>Kerajinan dan seni tradisional</li>
+                <li>Kuliner khas Toraja</li>
+            </ul>
+
+        </section>
+
+
+        <!-- ==================== GALERI ==================== -->
+        <section id="galeri" class="section-card">
+
+            <h2>Galeri Tana Toraja</h2>
+
+            <p>
+                Berikut beberapa gambaran mengenai keindahan
+                dan budaya Tana Toraja.
+            </p>
+
+            <div class="gallery">
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbsy7bQW1V5m8h3ZQ-5jm_XuAFhXWEzkoLPrwGk_BWFA&s=10"
+                        alt="Tongkonan" width="300">
+                    <figcaption>Rumah adat Tongkonan</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr2aaui6BQLbgUlqE-yWH0MqHaV_O7inVlKgb65Gle4Q&s=10"
+                        alt="Pemandangan Tana Toraja" width="300">
+                    <figcaption>Pemandangan alam Tana Toraja</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVIgtljAcFPib0DIlZ87pI2wD6pGKHBp50oIU0obNVxg&s=10"
+                        alt="Permukiman masyarakat Toraja" width="300">
+                    <figcaption>Permukiman masyarakat Toraja</figcaption>
+                </figure>
+            </div>
+
+        </section>
+
+
+        <!-- ==================== AKTIVITAS ==================== -->
+        <section id="aktivitas" class="section-card">
+
+            <h2>Aktivitas Wisata</h2>
+
+            <p>
+                Beberapa aktivitas yang dapat dilakukan ketika
+                berkunjung ke Tana Toraja antara lain:
+            </p>
+
+            <ol class="activity-list">
+                <li>
+                    <strong>Mengunjungi Tongkonan</strong>
+                    <p>
+                        Mengenal rumah adat dan arsitektur tradisional
+                        masyarakat Toraja.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Menikmati Pemandangan Alam</strong>
+                    <p>
+                        Menikmati suasana pegunungan dan lingkungan
+                        alam Tana Toraja.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Mengenal Budaya Toraja</strong>
+                    <p>
+                        Mempelajari berbagai kebudayaan dan tradisi
+                        masyarakat Toraja.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Berfoto</strong>
+                    <p>
+                        Mengabadikan pemandangan alam dan berbagai
+                        bangunan tradisional.
+                    </p>
+                </li>
+            </ol>
+
+        </section>
+
+
+        <!-- ==================== INFORMASI LOKASI ==================== -->
+        <section id="lokasi" class="section-card">
+
+            <h2>Informasi Lokasi</h2>
+
+            <p>
+                <strong>Destinasi:</strong> Tana Toraja
+            </p>
+
+            <p>
+                <strong>Provinsi:</strong> Sulawesi Selatan
+            </p>
+
+            <p>
+                <strong>Negara:</strong> Indonesia
+            </p>
+
+            <p>
+                Tana Toraja terletak di wilayah pegunungan Sulawesi
+                Selatan dan dapat ditempuh melalui perjalanan darat
+                dari Kota Makassar.
+            </p>
+
+            <h3>Peta Lokasi</h3>
+
+            <iframe src="https://www.google.com/maps?q=Tana+Toraja,+Sulawesi+Selatan&output=embed" width="600"
+                height="400" loading="lazy" class="media-frame map-frame">
+            </iframe>
+
+        </section>
+
+
+        <!-- ==================== TABEL INFORMASI ==================== -->
+        <section class="section-card">
+
+            <h2>Tabel Informasi Wisata</h2>
+
+            <table class="info-table">
+
+                <thead>
+                    <tr>
+                        <th>Informasi</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Nama Destinasi</td>
+                        <td>Tana Toraja</td>
+                    </tr>
+
+                    <tr>
+                        <td>Provinsi</td>
+                        <td>Sulawesi Selatan</td>
+                    </tr>
+
+                    <tr>
+                        <td>Jenis Wisata</td>
+                        <td>Budaya dan Alam</td>
+                    </tr>
+
+                    <tr>
+                        <td>Objek Ikonik</td>
+                        <td>Tongkonan</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bahasa</td>
+                        <td>Bahasa Indonesia dan bahasa daerah</td>
+                    </tr>
+
+                    <tr>
+                        <td>Aktivitas</td>
+                        <td>Wisata budaya, fotografi, dan menikmati alam</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <!-- ==================== MULTIMEDIA ==================== -->
+        <section class="section-card">
+
+            <h2>Video Tana Toraja</h2>
+
+            <p>
+                Saksikan video mengenai keindahan dan budaya Tana Toraja.
+            </p>
+            <iframe class="media-frame video-frame" width="560" height="315" src="https://www.youtube.com/embed/b6a9qDUnjcU?si=8kw1uRKRdsuJ6XRu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+
+        <!-- ==================== FORMULIR ==================== -->
+        <section id="kontak" class="section-card">
+
+            <h2>Formulir Pengunjung</h2>
+
+            <p>
+                Berikan pendapat atau pengalaman Anda mengenai
+                Tana Toraja.
+            </p>
+
+            <form action="#" method="post">
+
+                <p>
+                    <label for="nama">Nama:</label><br>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                </p>
+
+                <p>
+                    <label for="asal">Asal Daerah:</label><br>
+                    <input type="text" id="asal" name="asal" placeholder="Contoh: Makassar">
+                </p>
+
+                <p>
+                    <label for="aktivitas">Aktivitas yang diminati:</label><br>
+
+                    <select id="aktivitas" name="aktivitas">
+
+                        <option value="">
+                            -- Pilih aktivitas --
+                        </option>
+
+                        <option value="budaya">
+                            Wisata Budaya
+                        </option>
+
+                        <option value="alam">
+                            Menikmati Alam
+                        </option>
+
+                        <option value="fotografi">
+                            Fotografi
+                        </option>
+
+                        <option value="tongkonan">
+                            Mengunjungi Tongkonan
+                        </option>
+
+                    </select>
+                </p>
+
+                <p>
+                    <label for="pesan">Pesan:</label><br>
+
+                    <textarea id="pesan" name="pesan" rows="5" cols="40"
+                        placeholder="Tuliskan pendapat Anda..."></textarea>
+                </p>
+
+                <p>
+                    <input class="form-button" type="submit" value="Kirim">
+
+                    <input class="form-button" type="reset" value="Reset">
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+
+        <hr>
+
+        <p>
+            &copy; 2026 Pesona Tana Toraja
+        </p>
+
+        <p>
+            Website ini dibuat untuk tugas praktikum HTML.
+        </p>
+
+        <p>
+            Destinasi: Tana Toraja, Sulawesi Selatan, Indonesia
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```

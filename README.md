@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## LAB-WEB-01-2026
+Selamat datang di repositori LAB-WEB-01-2026! Repositori ini adalah tempat pengumpulan tugas praktikum untuk mata kuliah Praktikum Pemrograman Web 2026. Berikut adalah panduan singkat untuk mengumpulkan tugas di repositori ini.
 
-## Getting Started
+## Cara Pengumpulan (Commit)
+Berikut langkah-langkahnya:
+1. **Fork Repositori** : Di kanan atas halaman repositori, klik tombol "Fork" untuk membuat salinan repositori ini ke akun GitHub pribadimu.
 
-First, run the development server:
+![image](https://github.com/user-attachments/assets/dcb3f9aa-3b44-48e7-9fe9-e2fb55b01cbd)
+
+2. **Kloning Repositori**:klik pada bagian code dan salin url dari repo ini
+
+3. **Buka Terminal**: Buka terminal atau command prompt di folder yang kamu inginkan.
+
+4. **Kloning Repositori**: Ganti `<repository-url>` dengan URL yang telah kamu salin.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone <url-repositori-hasil-fork>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. **Buat Cabang (Branch) Baru**: Masuk ke direktori repositori yang telah di-kloning. Lalu buat cabang sesuai nim masing-masing.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+cd LAB-WEB-01-2026
+git checkout -b H071251nnn # Sesuaikan dengan NIM masing-masing
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+6. **Masuk ke Folder**: Masuk ke directory/folder sesuai NIM.
 
-## Learn More
+```bash
+cd H071251nnn # Sesuaikan dengan NIM masing-masing
+```
 
-To learn more about Next.js, take a look at the following resources:
+7. **Lakukan Perubahan**: Mulai mengedit atau menambahkan berkas (folder maupun file tugas) sesuai dengan instruksi tugas yang diberikan.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+8. **Tambahkan File Tugas**: Setelah selesai melakukan perubahan pada kode, tambahkan file tugas tersebut lalu.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git add .
+```
 
-## Deploy on Vercel
+9. **Commit Perubahan**: Setelah semua tugas sudah ditambah, commit dengan pesan yang deskriptif.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git commit -m "Tugas Praktikum 1 | H071251nnn"  # Sesuaikan dengan NIM masing-masing
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Note: Untuk cek status file apakah sudah ditambahkan maupun dikomit, bisa dilakukan dengan `git status`
+
+10. **Push ke GitHub**: Dorong (push) cabang baru yang telah kamu buat ke repositori GitHub.
+
+```bash
+git push -u origin H071251nnn # Sesuaikan dengan NIM masing-masing
+```
+
+11. **Buka Pull Request**: Di halaman repositori akunmu, akan ada pemberitahuan untuk melakukan `Pull Request`. Klik tautan tersebut lalu lakukan `Pull Request` ke repositori utama ini.
+
+## Tips Tambahan
+
+- Batas asistensi tugas maksimal 2 pekan setelah tugas diberikan
+- Pesan Commit sebaiknya yang bisa dipahami kedepannya
+- Jika ada yang ingin ditanyakan silahkan bertanya di GB Asistensi / Private Chat
+
+**"*Ya,yang dibutuhkan oleh manusia,adalah jangan berhenti. Jangan berhenti mengusahakan yang diinginkan.*" - 3726mdpl**
+
+
+### -- LAB-WEB-01-2026 --

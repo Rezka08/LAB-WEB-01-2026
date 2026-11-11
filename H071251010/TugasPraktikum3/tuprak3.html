@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiklusKita | Dari Rumah, Mulai Perubahan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-stone-50 text-slate-800 font-sans">
+
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-stone-200">
+    <div class="max-w-6xl mx-auto px-5 py-4">
+      <div class="flex items-center justify-between gap-3 relative">
+        <a href="#" class="text-xl font-black tracking-tight text-emerald-700">
+          Siklus<span class="text-slate-800">Kita.</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+          <a href="#tentang" class="hover:text-emerald-600 transition">Tentang</a>
+          <a href="#visi" class="hover:text-emerald-600 transition">Visi & Misi</a>
+          <a href="#tpa" class="hover:text-emerald-600 transition">TPA Antang</a>
+          <a href="#3r" class="hover:text-emerald-600 transition">3R</a>
+          <a href="#challenge" class="hover:text-emerald-600 transition">Challenge</a>
+          <a href="#gabung" class="bg-emerald-700 text-white px-4 py-2 rounded-full hover:bg-emerald-800 transition">Gabung</a>
+        </div>
+
+        <div class="flex items-center gap-2 md:hidden">
+          <a href="#gabung" class="bg-emerald-700 text-white px-3 py-2 rounded-full text-sm font-medium">
+            Mulai
+          </a>
+
+          <div class="relative">
+            <input id="menu-toggle" type="checkbox" class="peer sr-only" aria-label="Buka menu navigasi">
+            <label for="menu-toggle" class="inline-flex items-center justify-center w-11 h-11 rounded-full border border-stone-200 bg-white text-slate-800 shadow-sm hover:bg-stone-50 transition cursor-pointer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="w-5 h-5">
+                <path d="M4 7h16M4 12h16M4 17h16"></path>
+              </svg>
+            </label>
+
+            <div class="hidden peer-checked:block absolute right-0 top-14 w-64 mt-2">
+              <div class="flex flex-col gap-2 rounded-2xl border border-stone-200 bg-white p-4 shadow-lg">
+                <a href="#tentang" class="px-3 py-2 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition">Tentang</a>
+                <a href="#visi" class="px-3 py-2 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition">Visi & Misi</a>
+                <a href="#tpa" class="px-3 py-2 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition">TPA Antang</a>
+                <a href="#3r" class="px-3 py-2 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition">3R</a>
+                <a href="#challenge" class="px-3 py-2 rounded-lg hover:bg-emerald-50 hover:text-emerald-700 transition">Challenge</a>
+                <a href="#gabung" class="mt-2 bg-emerald-700 text-white text-center px-4 py-2.5 rounded-full font-medium hover:bg-emerald-800 transition">Gabung</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="min-h-screen flex items-center bg-emerald-950 text-white">
+    <div class="max-w-6xl mx-auto px-5 py-20 grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <p class="inline-block mb-5 px-4 py-2 rounded-full bg-red-800 text-emerald-200 text-xs font-bold tracking-widest uppercase animate-pulse">
+          Gerakan lingkungan Makassar
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-black leading-tight">
+          Sampah tidak <span class="text-emerald-400">hilang.</span>
+          <br>
+          Kita yang menentukan <span class="text-emerald-400">siklusnya.</span>
+        </h1>
+
+        <p class="mt-6 max-w-xl text-emerald-100 text-lg leading-relaxed">
+          SiklusKita mengajak masyarakat memulai pengelolaan sampah dari hal sederhana:
+          <b>kurangi, gunakan kembali, dan pilah.</b>
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#challenge" class="bg-white text-emerald-900 px-6 py-3 rounded-full font-bold hover:-translate-y-1 hover:shadow-xl transition">
+            Mulai 7 Hari ->
+          </a>
+
+          <a href="#tpa" class="border border-emerald-500 px-6 py-3 rounded-full font-bold hover:bg-emerald-800 transition">
+            Kenapa ini penting?
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="w-72 h-72 md:w-96 md:h-96 rounded-full bg-emerald-800 flex items-center justify-center relative">
+          <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-emerald-700 flex items-center justify-center">
+            <div class="text-8xl md:text-9xl hover:rotate-180 transition duration-700">
+              ♻️
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section id="tentang" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-5 text-center">
+
+      <p class="text-emerald-600 font-bold text-sm tracking-widest uppercase">
+        Tentang SiklusKita
+      </p>
+
+      <h2 class="mt-3 text-4xl md:text-5xl font-black">
+        Kota yang bersih dimulai
+        <span class="text-emerald-600">dari kebiasaan.</span>
+      </h2>
+
+      <p class="mt-6 max-w-3xl mx-auto text-slate-600 leading-8">
+        Pengelolaan sampah bukan hanya persoalan ketika sampah sudah berada
+        di tempat pembuangan akhir. Perubahan juga dapat dimulai dari sumbernya:
+        rumah, sekolah, kampus, tempat kerja, dan ruang publik.
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-5 mt-12">
+
+        <div class="p-6 rounded-2xl bg-emerald-50 hover:-translate-y-2 hover:shadow-lg transition">
+          <div class="text-4xl">🏠</div>
+          <h3 class="mt-3 font-bold text-xl">Mulai dari Rumah</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Kebiasaan kecil dapat dimulai sebelum sampah keluar dari rumah.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-amber-50 hover:-translate-y-2 hover:shadow-lg transition">
+          <div class="text-4xl">🗑️</div>
+          <h3 class="mt-3 font-bold text-xl">Pilah</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Kenali dan pisahkan sampah berdasarkan jenisnya.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-sky-50 hover:-translate-y-2 hover:shadow-lg transition">
+          <div class="text-4xl">🔄</div>
+          <h3 class="mt-3 font-bold text-xl">Perpanjang Siklus</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Gunakan kembali dan manfaatkan material yang masih bernilai.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="visi" class="py-20 bg-stone-100">
+    <div class="max-w-6xl mx-auto px-5">
+
+      <div class="text-center mb-12">
+        <p class="text-emerald-600 font-bold uppercase text-sm tracking-widest">
+          Arah Gerakan
+        </p>
+        <h2 class="text-4xl font-black mt-2">Visi & Misi Kami</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="md:col-span-2 bg-emerald-900 text-white p-8 md:p-10 rounded-3xl hover:-translate-y-1 hover:shadow-xl transition">
+          <span class="text-5xl">🌱</span>
+
+          <p class="mt-6 text-sm font-bold uppercase tracking-widest text-emerald-300">
+            Visi
+          </p>
+
+          <h3 class="mt-3 text-2xl md:text-3xl font-bold leading-relaxed">
+            Membangun kebiasaan masyarakat yang lebih sadar dan bertanggung jawab
+            dalam mengurangi serta mengelola sampah sejak dari sumbernya.
+          </h3>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl hover:shadow-xl transition">
+          <p class="text-sm font-bold uppercase tracking-widest text-emerald-600">
+            Misi
+          </p>
+
+          <div class="mt-6 space-y-5">
+            <div class="flex gap-4">
+              <b class="text-emerald-600">01</b>
+              <p class="text-sm">Mengedukasi kebiasaan pengelolaan sampah.</p>
+            </div>
+
+            <div class="flex gap-4">
+              <b class="text-emerald-600">02</b>
+              <p class="text-sm">Mendorong pengurangan sampah sekali pakai.</p>
+            </div>
+
+            <div class="flex gap-4">
+              <b class="text-emerald-600">03</b>
+              <p class="text-sm">Membiasakan pemilahan dari sumber.</p>
+            </div>
+
+            <div class="flex gap-4">
+              <b class="text-emerald-600">04</b>
+              <p class="text-sm">Mengajak masyarakat bergerak bersama.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="tpa" class="py-20 bg-emerald-950 text-white">
+    <div class="max-w-6xl mx-auto px-5">
+
+      <div class="grid md:grid-cols-2 gap-10 items-end">
+
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-black uppercase tracking-widest">
+            For Your Information
+          </span>
+
+          <h2 class="mt-4 text-4xl md:text-5xl font-black">
+            Ke mana sampah Makassar
+            <span class="text-emerald-400">berakhir?</span>
+          </h2>
+        </div>
+
+        <p class="text-emerald-100 leading-7">
+          TPA Tamangapa di kawasan Antang merupakan bagian dari sistem
+          pengelolaan sampah Kota Makassar. Namun, pengelolaan sampah
+          tidak seharusnya hanya bergantung pada tahap akhir.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 mt-12">
+
+        <article class="group bg-white/10 border border-white/10 rounded-3xl p-7 hover:bg-white/15 hover:-translate-y-2 transition duration-300">
+          <div class="text-4xl group-hover:rotate-12 transition duration-500">🏭</div>
+
+          <h3 class="mt-6 text-xl font-black">TPA adalah tahap akhir</h3>
+
+          <p class="mt-3 text-sm text-emerald-100 leading-6">
+            Tempat pemrosesan akhir bukan alasan untuk membuang semua jenis
+            sampah tanpa memilahnya sejak dari rumah.
+          </p>
+        </article>
+
+        <article class="group bg-amber-400 text-slate-900 rounded-3xl p-7 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+          <div class="text-4xl group-hover:rotate-12 transition duration-500">⚠️</div>
+
+          <h3 class="mt-6 text-xl font-black">Tidak semua sampah sama</h3>
+
+          <p class="mt-3 text-sm leading-6">
+            Jenis sampah memiliki karakteristik dan cara pengelolaan yang berbeda.
+            Karena itu, pemilahan dari sumber menjadi langkah penting sebelum
+            sampah masuk ke sistem pengangkutan.
+          </p>
+        </article>
+
+        <article class="group bg-emerald-700 rounded-3xl p-7 hover:bg-emerald-600 hover:-translate-y-2 transition duration-300">
+          <div class="text-4xl group-hover:scale-110 transition">♻️</div>
+
+          <h3 class="mt-6 text-xl font-black">Kurangi dari sumber</h3>
+
+          <p class="mt-3 text-sm text-emerald-100 leading-6">
+            Semakin banyak sampah yang dapat dikurangi, digunakan kembali,
+            atau disalurkan untuk didaur ulang, semakin sedikit material
+            yang perlu berakhir sebagai residu.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="mt-8">
+        <details class="group border border-emerald-700 rounded-2xl p-5 cursor-pointer">
+
+          <summary class="flex items-center justify-between font-bold">
+            <span>Jadi, apa yang bisa kita lakukan?</span>
+            <span class="text-2xl group-open:rotate-180 transition">v</span>
+          </summary>
+
+          <div class="mt-5 text-sm text-emerald-100 leading-7 border-t border-emerald-800 pt-5">
+            <p>
+              Mulai dari hal sederhana: kurangi barang sekali pakai,
+              gunakan kembali barang yang masih layak, pisahkan sampah
+              berdasarkan jenisnya, dan salurkan material yang masih
+              memiliki nilai ke jalur pengelolaan yang sesuai.
+            </p>
+
+            <p class="mt-3 text-amber-200">
+              Catatan: ketentuan operasional dan jenis sampah yang dapat
+              diterima fasilitas pengelolaan dapat berubah. Informasi terbaru
+              sebaiknya dikonfirmasi kepada instansi pengelola lingkungan hidup Kota Makassar.
+            </p>
+          </div>
+
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="3r" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-5">
+
+      <div class="max-w-2xl mb-12">
+        <p class="text-emerald-600 font-bold text-sm uppercase tracking-widest">
+          Kebiasaan sederhana
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-black mt-2">
+          Kenali <span class="text-emerald-600">3R.</span>
+        </h2>
+
+        <p class="mt-4 text-slate-600">
+          Tidak harus langsung melakukan semuanya.
+          Mulai dari satu kebiasaan yang paling mudah dilakukan hari ini.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <article class="group border border-slate-200 rounded-3xl p-7 hover:bg-emerald-900 hover:text-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+          <div class="flex justify-between items-center">
+            <span class="text-5xl group-hover:rotate-12 transition">🛒</span>
+            <span class="text-sm font-bold text-slate-400 group-hover:text-emerald-300">01</span>
+          </div>
+
+          <h3 class="mt-8 text-2xl font-black">REDUCE</h3>
+
+          <p class="mt-3 text-slate-600 group-hover:text-emerald-100">
+            Kurangi barang yang sebenarnya tidak diperlukan.
+          </p>
+
+          <div class="mt-6 space-y-2 text-sm">
+            <p>✓ Bawa tumbler</p>
+            <p>✓ Gunakan tas belanja</p>
+            <p>✓ Hindari pembelian berlebihan</p>
+          </div>
+
+        </article>
+
+        <article class="group border border-slate-200 rounded-3xl p-7 hover:bg-amber-700 hover:text-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+          <div class="flex justify-between items-center">
+            <span class="text-5xl group-hover:rotate-180 transition duration-700">🔄</span>
+            <span class="text-sm font-bold text-slate-400 group-hover:text-amber-200">02</span>
+          </div>
+
+          <h3 class="mt-8 text-2xl font-black">REUSE</h3>
+
+          <p class="mt-3 text-slate-600 group-hover:text-amber-100">
+            Gunakan kembali barang yang masih layak digunakan.
+          </p>
+
+          <div class="mt-6 space-y-2 text-sm">
+            <p>✓ Pakai ulang wadah</p>
+            <p>✓ Donasikan barang layak</p>
+            <p>✓ Perbaiki sebelum membeli</p>
+          </div>
+
+        </article>
+
+        <article class="group border border-slate-200 rounded-3xl p-7 hover:bg-sky-800 hover:text-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+
+          <div class="flex justify-between items-center">
+            <span class="text-5xl group-hover:rotate-180 transition duration-700">♻️</span>
+            <span class="text-sm font-bold text-slate-400 group-hover:text-sky-200">03</span>
+          </div>
+
+          <h3 class="mt-8 text-2xl font-black">RECYCLE</h3>
+
+          <p class="mt-3 text-slate-600 group-hover:text-sky-100">
+            Pilah material yang memiliki peluang untuk didaur ulang.
+          </p>
+
+          <div class="mt-6 space-y-2 text-sm">
+            <p>✓ Pisahkan berdasarkan jenis</p>
+            <p>✓ Bersihkan material</p>
+            <p>✓ Salurkan ke pengelolaan sesuai</p>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-emerald-950 text-white">
+    <div class="max-w-6xl mx-auto px-5 text-center">
+
+      <p class="text-emerald-400 font-bold uppercase text-sm tracking-widest">
+        Jangan berhenti di tempat sampah
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-black mt-3">
+        Ke mana sampahmu pergi?
+      </h2>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="bg-emerald-800 p-6 rounded-2xl hover:-translate-y-2 transition">
+          <div class="text-4xl">🏠</div>
+          <b class="block mt-2">Rumah</b>
+        </div>
+
+        <div class="bg-emerald-800 p-6 rounded-2xl hover:-translate-y-2 transition">
+          <div class="text-4xl">🗂️</div>
+          <b class="block mt-2">Pilah</b>
+        </div>
+
+        <div class="bg-emerald-800 p-6 rounded-2xl hover:-translate-y-2 transition">
+          <div class="text-4xl">🔄</div>
+          <b class="block mt-2">Kelola</b>
+        </div>
+
+        <div class="bg-emerald-800 p-6 rounded-2xl hover:-translate-y-2 transition">
+          <div class="text-4xl">🌱</div>
+          <b class="block mt-2">Bernilai</b>
+        </div>
+
+      </div>
+
+      <p class="max-w-2xl mx-auto mt-10 text-emerald-100 leading-7">
+        Semakin banyak sampah yang dapat dikurangi, digunakan kembali,
+        atau dikelola dengan tepat dari sumbernya, semakin sedikit pula
+        yang berakhir sebagai residu.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-5">
+
+      <div class="text-center mb-10">
+        <p class="text-emerald-600 font-bold uppercase text-sm tracking-widest">
+          Cek pemahamanmu
+        </p>
+        <h2 class="text-4xl font-black mt-2">Mitos atau Fakta?</h2>
+      </div>
+
+      <div class="space-y-4">
+
+        <details class="group border border-slate-200 rounded-2xl p-5 cursor-pointer">
+          <summary class="font-bold flex justify-between">
+            Semua sampah bisa langsung didaur ulang.
+            <span class="group-open:rotate-180 transition">⌄</span>
+          </summary>
+
+          <p class="mt-4 text-sm text-slate-600 leading-6">
+            Tidak semua material memiliki proses daur ulang yang sama.
+            Karena itu, pemilahan dan pengelolaan sesuai jenis material menjadi penting.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-2xl p-5 cursor-pointer">
+          <summary class="font-bold flex justify-between">
+            Mengurangi sampah juga merupakan bagian penting dari 3R.
+            <span class="group-open:rotate-180 transition">⌄</span>
+          </summary>
+
+          <p class="mt-4 text-sm text-slate-600 leading-6">
+            Prinsip 3R mencakup Reduce, Reuse, dan Recycle.
+            Pengurangan sampah dari sumber merupakan bagian penting sebelum
+            barang masuk ke tahap penggunaan kembali atau daur ulang.
+          </p>
+        </details>
+
+        <details class="group border border-slate-200 rounded-2xl p-5 cursor-pointer">
+          <summary class="font-bold flex justify-between">
+            Membuang sampah berarti masalahnya selesai.
+            <span class="group-open:rotate-180 transition">⌄</span>
+          </summary>
+
+          <p class="mt-4 text-sm text-slate-600 leading-6">
+            Tidak. Setelah dibuang, sampah masih membutuhkan proses pengangkutan,
+            pengolahan, pemanfaatan, atau pemrosesan akhir.
+          </p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="challenge" class="py-20 bg-stone-100">
+    <div class="max-w-6xl mx-auto px-5">
+
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
+
+        <div>
+          <p class="text-emerald-600 font-bold uppercase text-sm tracking-widest">
+            Mulai dari sekarang
+          </p>
+
+          <h2 class="text-4xl font-black mt-2">
+            7-Day Waste Challenge
+          </h2>
+        </div>
+
+        <p class="max-w-md text-slate-600">
+          Satu kebiasaan selama satu minggu.
+          Kecil, tetapi bisa menjadi awal.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="bg-white rounded-2xl p-6 hover:-translate-y-2 transition">
+          <span class="text-emerald-600 font-black">DAY 01</span>
+          <h3 class="font-bold text-xl mt-3">Bawa Tumbler</h3>
+          <p class="text-sm text-slate-500 mt-2">Kurangi penggunaan botol sekali pakai.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 hover:-translate-y-2 transition">
+          <span class="text-emerald-600 font-black">DAY 02</span>
+          <h3 class="font-bold text-xl mt-3">Bawa Tas</h3>
+          <p class="text-sm text-slate-500 mt-2">Siapkan tas belanja yang dapat digunakan kembali.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 hover:-translate-y-2 transition">
+          <span class="text-emerald-600 font-black">DAY 03</span>
+          <h3 class="font-bold text-xl mt-3">Pilah</h3>
+          <p class="text-sm text-slate-500 mt-2">Pisahkan sampah berdasarkan jenisnya.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 hover:-translate-y-2 transition">
+          <span class="text-emerald-600 font-black">DAY 04</span>
+          <h3 class="font-bold text-xl mt-3">Reuse</h3>
+          <p class="text-sm text-slate-500 mt-2">Cari satu barang yang bisa digunakan kembali.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 hover:-translate-y-2 transition">
+          <span class="text-emerald-600 font-black">DAY 05</span>
+          <h3 class="font-bold text-xl mt-3">No Overbuy</h3>
+          <p class="text-sm text-slate-500 mt-2">Beli sesuai kebutuhan.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 hover:-translate-y-2 transition">
+          <span class="text-emerald-600 font-black">DAY 06</span>
+          <h3 class="font-bold text-xl mt-3">Cek Rumah</h3>
+          <p class="text-sm text-slate-500 mt-2">Temukan barang yang masih dapat digunakan.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 hover:-translate-y-2 transition">
+          <span class="text-emerald-600 font-black">DAY 07</span>
+          <h3 class="font-bold text-xl mt-3">Ajak Teman</h3>
+          <p class="text-sm text-slate-500 mt-2">Bagikan kebiasaan baikmu.</p>
+        </div>
+
+        <div class="bg-emerald-700 text-white rounded-2xl p-6 flex flex-col justify-between hover:bg-emerald-800 transition">
+
+          <div>
+            <span class="text-emerald-200 font-black">READY?</span>
+            <h3 class="font-black text-2xl mt-3">Mulai hari ini.</h3>
+          </div>
+
+          <a href="#gabung" class="mt-6 bg-white text-emerald-800 text-center py-3 rounded-xl font-bold hover:bg-emerald-100 transition">
+            Saya Ikut →
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-5">
+
+      <div class="text-center mb-12">
+        <p class="text-emerald-600 font-bold uppercase text-sm tracking-widest">
+          Suara perubahan
+        </p>
+
+        <h2 class="text-4xl font-black mt-2">
+          Mulai dari yang sederhana.
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <blockquote class="bg-emerald-50 p-7 rounded-3xl hover:-translate-y-2 transition">
+          <div class="text-3xl">“</div>
+          <p class="mt-2 leading-7">
+            Ternyata memilah sampah bisa dimulai dari menyediakan
+            dua tempat sampah sederhana di rumah.
+          </p>
+          <footer class="mt-5 text-sm font-bold text-emerald-700">
+            — Glenn Robean Runtunuwu
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-amber-50 p-7 rounded-3xl hover:-translate-y-2 transition">
+          <div class="text-3xl">“</div>
+          <p class="mt-2 leading-7">
+            Saya mulai membawa tumbler bukan karena sempurna,
+            tetapi karena ingin mengurangi barang sekali pakai.
+          </p>
+          <footer class="mt-5 text-sm font-bold text-amber-700">
+            — Teguh Paniro Silitonga
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-sky-50 p-7 rounded-3xl hover:-translate-y-2 transition">
+          <div class="text-3xl">“</div>
+          <p class="mt-2 leading-7">
+            Yang penting bukan langsung sempurna.
+            Yang penting mulai dan konsisten.
+          </p>
+          <footer class="mt-5 text-sm font-bold text-sky-700">
+            — Almendo Ubro
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="gabung" class="py-20 bg-emerald-950 text-white">
+    <div class="max-w-5xl mx-auto px-5">
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <p class="text-emerald-400 font-bold uppercase text-sm tracking-widest">
+            Join the movement
+          </p>
+
+          <h2 class="text-4xl md:text-5xl font-black mt-3">
+            Mau mulai dari satu kebiasaan?
+          </h2>
+
+          <p class="mt-5 text-emerald-100 leading-7">
+            Bergabunglah dengan SiklusKita dan jadikan pengelolaan
+            sampah sebagai bagian dari kebiasaan sehari-hari.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3 text-sm">
+            <span class="bg-emerald-800 px-4 py-2 rounded-full">♻️ Reduce</span>
+            <span class="bg-emerald-800 px-4 py-2 rounded-full">🔄 Reuse</span>
+            <span class="bg-emerald-800 px-4 py-2 rounded-full">🌱 Recycle</span>
+          </div>
+        </div>
+
+        <form class="bg-white text-slate-800 p-7 rounded-3xl shadow-2xl">
+
+          <h3 class="text-2xl font-black">Ikut SiklusKita</h3>
+          <p class="text-sm text-slate-500 mt-1">
+            Form ini hanya sebagai tampilan.
+          </p>
+
+          <label class="block mt-6 text-sm font-bold">Nama</label>
+          <input type="text" placeholder="Nama kamu"
+            class="mt-2 w-full p-3 border border-slate-200 rounded-xl outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
+
+          <label class="block mt-4 text-sm font-bold">Email</label>
+          <input type="email" placeholder="hartanto@gmail.com"
+            class="mt-2 w-full p-3 border border-slate-200 rounded-xl outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100">
+
+          <label class="block mt-4 text-sm font-bold">
+            Kebiasaan yang ingin dimulai
+          </label>
+
+          <select class="mt-2 w-full p-3 border border-slate-200 rounded-xl focus:border-emerald-500">
+            <option>Reduce</option>
+            <option>Reuse</option>
+            <option>Recycle</option>
+            <option>Ketiganya</option>
+          </select>
+
+          <button type="button"
+            class="mt-6 w-full bg-emerald-700 text-white py-3 rounded-xl font-bold hover:bg-emerald-800 active:scale-95 transition">
+            Saya Siap Mulai ♻️
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-slate-400">
+    <div class="max-w-6xl mx-auto px-5 py-12">
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div>
+          <h2 class="text-2xl font-black text-white">
+            Siklus<span class="text-emerald-400">Kita.</span>
+          </h2>
+
+          <p class="mt-3 text-sm leading-6">
+            Dari rumah, mulai perubahan. Gerakan sederhana untuk kebiasaan
+            pengelolaan sampah yang lebih baik.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white">Navigasi</h3>
+
+          <div class="mt-3 space-y-2 text-sm">
+            <a href="#tentang" class="block hover:text-emerald-400 transition">Tentang</a>
+            <a href="#visi" class="block hover:text-emerald-400 transition">Visi & Misi</a>
+            <a href="#tpa" class="block hover:text-emerald-400 transition">TPA Antang</a>
+            <a href="#3r" class="block hover:text-emerald-400 transition">3R</a>
+            <a href="#challenge" class="block hover:text-emerald-400 transition">Challenge</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white">Ikuti</h3>
+
+          <div class="mt-4 flex gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 text-white shadow-lg hover:scale-105 transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.2"></circle>
+                <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </a>
+
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="w-11 h-11 flex items-center justify-center rounded-full bg-black text-white shadow-lg hover:scale-105 transition">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+                <path d="M15.5 3c.8 1.8 2.2 3 4.2 3.3v2.9c-1.4-.1-2.7-.5-3.9-1.3v6.3a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v3a2.7 2.7 0 1 0 1.8 2.6V3h2.5Z"></path>
+              </svg>
+            </a>
+
+            <a href="mailto:sikluskita@gmail.com" aria-label="Email" class="w-11 h-11 flex items-center justify-center rounded-full bg-emerald-600 text-white shadow-lg hover:scale-105 transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="w-5 h-5" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="M4 7l8 6 8-6"></path>
+              </svg>
+            </a>
+          </div>
+
+          <p class="mt-4 text-xs text-slate-500">
+            Informasi pada website ini bersifat edukatif.
+            Informasi operasional pengelolaan sampah dapat berubah
+            sesuai kebijakan dan ketentuan pihak terkait.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs">
+
+        <p>© 2026 SiklusKita. Dwi Hartanto - H071251010.</p>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

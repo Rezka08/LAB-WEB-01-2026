@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KlinKilat — Jasa Perawatan & Kebersihan Rumah Terpercaya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+
+  <!--NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#beranda" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-sky-200 transition-transform group-hover:scale-105">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold tracking-tight text-slate-900 leading-tight">Klin<span class="text-sky-600">Kilat</span></span>
+            <span class="text-xs font-medium text-slate-500 tracking-wider uppercase">Solusi Rumah Idaman</span>
+          </div>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#beranda" class="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Beranda</a>
+          <a href="#tentang" class="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Tentang Kami</a>
+          <a href="#layanan" class="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Layanan</a>
+          <a href="#testimoni" class="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Testimoni</a>
+          <a href="#pesan" class="text-sm font-semibold text-slate-700 hover:text-sky-600 transition-colors">Kontak & Pemesanan</a>
+        </div>
+
+        <div class="hidden md:flex items-center">
+          <a href="#pesan" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 shadow-md shadow-sky-200 transition-all hover:shadow-lg">
+            Panggil Teknisi Sekarang
+          </a>
+        </div>
+
+        <details class="group relative md:hidden">
+          <summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg text-slate-700 transition-colors hover:bg-slate-100 [&::-webkit-details-marker]:hidden" aria-label="Menu navigasi">
+            <svg class="h-6 w-6 group-open:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class="hidden h-6 w-6 group-open:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </summary>
+          <div class="absolute right-0 top-full z-50 mt-2 w-72 max-w-[calc(100vw-2rem)] rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
+            <div class="flex flex-col gap-1">
+              <a href="#beranda" class="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-sky-600 transition-colors">Beranda</a>
+              <a href="#tentang" class="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-sky-600 transition-colors">Tentang Kami</a>
+              <a href="#layanan" class="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-sky-600 transition-colors">Layanan</a>
+              <a href="#testimoni" class="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-sky-600 transition-colors">Testimoni</a>
+              <a href="#pesan" class="px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:text-sky-600 transition-colors">Kontak & Pemesanan</a>
+              <a href="#pesan" class="mt-2 inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-sky-600 hover:bg-sky-700 transition-colors">Panggil Teknisi Sekarang</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </nav>
+
+  <!--HEADER & HERO SECTION -->
+  <header id="beranda" class="relative overflow-hidden bg-gradient-to-b from-sky-50/70 via-white to-slate-50 pt-16 pb-24 lg:pt-24 lg:pb-32 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-semibold tracking-wide uppercase">
+            <span class="w-2 h-2 rounded-full bg-sky-600 animate-pulse"></span>
+            Layanan Servis & Kebersihan Rumah Tangga #1
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Rumah Bersih, Nyaman, & Bebas Kendala dalam <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-cyan-500">Satu Panggilan.</span>
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            KlinKilat melayani deep cleaning rumah, pembersihan dan servis AC, perbaikan pipa air, kelistrikan, hingga sanitasi kasur dengan teknisi terlatih, sopan, dan bergaransi resmi.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+            <a href="#pesan" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-semibold text-white bg-sky-600 hover:bg-sky-700 shadow-lg shadow-sky-200 transition duration-200">
+              Pesan Kunjungan Cepat
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <a href="#layanan" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl font-semibold text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 transition duration-200">
+              Lihat Tarif & Layanan
+            </a>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200 grid grid-cols-3 gap-4 text-center sm:text-left">
+            <div>
+              <p class="text-2xl font-bold text-slate-900">15.000+</p>
+              <p class="text-xs text-slate-500 font-medium">Rumah Terlayani</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-slate-900">4.9 / 5.0</p>
+              <p class="text-xs text-slate-500 font-medium">Ulasan Positif</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold text-slate-900">100%</p>
+              <p class="text-xs text-slate-500 font-medium">Garansi Layanan</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md bg-white p-6 rounded-2xl shadow-xl shadow-slate-200 border border-slate-200/80">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-sky-600">Jadwal Hari Ini</p>
+                <p class="text-lg font-bold text-slate-900">Teknisi Siaga di Wilayah Anda</p>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">Tersedia</span>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm">
+                  AC
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-bold text-slate-900">Servis & Cuci AC Inverter</p>
+                  <p class="text-xs text-slate-500">Estimasi waktu pengerjaan 45-60 menit</p>
+                </div>
+                <span class="text-xs font-semibold text-slate-700">Rp 75.000</span>
+              </div>
+
+              <div class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-sm">
+                  DC
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-bold text-slate-900">Deep Cleaning Rumah & Dapur</p>
+                  <p class="text-xs text-slate-500">Sanitasi menyeluruh & kerak membandel</p>
+                </div>
+                <span class="text-xs font-semibold text-slate-700">Rp 190.000</span>
+              </div>
+
+              <div class="flex items-center gap-4 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-sm">
+                  SK
+                </div>
+                <div class="flex-1">
+                  <p class="text-sm font-bold text-slate-900">Sedot Tungau Kasur & Sofa</p>
+                  <p class="text-xs text-slate-500">Teknologi vakum hydro-allergenic</p>
+                </div>
+                <span class="text-xs font-semibold text-slate-700">Rp 120.000</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Peralatan Lengkap Standar Industri
+              </span>
+              <span class="font-medium text-sky-600">Garansi 7 Hari</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!--TENTANG KAMI (ABOUT) -->
+  <section id="tentang" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Terverifikasi</h3>
+            <p class="text-sm text-slate-600 mt-2">Seluruh teknisi melewati seleksi ketat dan pengecekan latar belakang resmi.</p>
+          </div>
+          <div class="p-6 bg-sky-600 text-white rounded-2xl shadow-lg shadow-sky-200 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-white/20 rounded-xl flex items-center justify-center font-bold">
+              ⚡
+            </div>
+            <h3 class="text-xl font-bold">Respon Kilat</h3>
+            <p class="text-sm text-sky-100 mt-2">Teknisi dapat tiba di lokasi maksimal 90 menit setelah konfirmasi jadwal.</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center font-bold">
+              🛡️
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Jaminan Mutu</h3>
+            <p class="text-sm text-slate-600 mt-2">Jika ada pengerjaan yang kurang bersih, teknisi kami kerjakan ulang gratis.</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 text-center">
+            <div class="w-12 h-12 mx-auto mb-4 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center font-bold">
+              🏷️
+            </div>
+            <h3 class="text-xl font-bold text-slate-900">Transparan</h3>
+            <p class="text-sm text-slate-600 mt-2">Harga sesuai estimasi awal di aplikasi/web tanpa biaya tersembunyi mendadak.</p>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="inline-block px-3 py-1 bg-sky-100 text-sky-800 text-xs font-semibold rounded-md uppercase">
+            Mengenal KlinKilat
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            Menghilangkan Repot Mengurus Masalah Rumah Sejak 2021
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-base">
+            KlinKilat lahir dari kebutuhan pemilik rumah, penghuni apartemen, dan keluarga pekerja yang menginginkan hunian sehat dan fungsional tanpa harus membuang waktu luang untuk bersih-bersih berat atau mencari tukang serabutan yang belum terjamin kualitas kerjanya.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-base">
+            Kami menghadirkan standardisasi peralatan kebersihan bertaraf internasional, cairan desinfektan ramah anak dan hewan peliharaan, serta teknisi ber-SOP jelas yang menghormati privasi ruangan keluarga Anda.
+          </p>
+          <div class="pt-2">
+            <a href="#layanan" class="text-sky-600 font-semibold inline-flex items-center gap-2 hover:text-sky-700">
+              Lihat ragam paket perawatan rumah kami
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FITUR ATAU MANFAAT (GRID SYSTEM) -->
+  <section id="layanan" class="py-20 bg-slate-100/70 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Katalog Layanan Unggulan</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Solusi Praktis untuk Segala Keperluan Rumah
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Pilih kategori bantuan yang Anda butuhkan hari ini dengan tarif transparan dan teknisi bersertifikasi.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Deep Cleaning Rumah</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Pembersihan menyeluruh kamar mandi, kerak lantai, dapur berlemak, dan debu sudut jendela sebelum atau sesudah pindahan.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Mulai dari</span>
+            <span class="text-sm font-bold text-sky-600">Rp 150.000</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Perawatan & Cuci AC</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Cuci filter evaporator, cek tekanan freon R32/R410A, pembersihan pipa pembuangan, dan perbaikan AC berisik atau bocor air.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Mulai dari</span>
+            <span class="text-sm font-bold text-sky-600">Rp 75.000 / Unit</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Hydro Vacuum Kasur</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Penyedotan mikro-debu, tungau kasur, dan kutu springbed memakai vacuum berkekuatan tinggi bebas bahan kimia berbahaya.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Mulai dari</span>
+            <span class="text-sm font-bold text-sky-600">Rp 120.000 / Kasur</span>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition duration-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Perbaikan Pipa & Listrik</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Penanganan kran bocor, instalasi pompa air, pipa mampet, saklar korsleting, penggantian MCB, hingga perapian instalasi kabel.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-500">Mulai dari</span>
+            <span class="text-sm font-bold text-sky-600">Rp 90.000 / Titik</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--TESTIMONI (GRID SYSTEM) -->
+  <section id="testimoni" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-sky-600 text-xs font-bold uppercase tracking-wider">Ulasan Pelanggan</span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">
+          Apa Kata Pemilik Rumah Tentang Kami?
+        </h2>
+        <p class="text-slate-600 text-sm">
+          Kepercayaan Anda adalah prioritas utama setiap teknisi KlinKilat yang bertugas di lapangan.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "Kamar mandi rumah baru saya sebelumnya penuh kerak semen yang susah hilang. Tim KlinKilat bawa chemical khusus yang aman dan hasilnya seperti hotel berbintang. Sangat puas!"
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-sky-200 text-sky-800 font-bold flex items-center justify-center text-sm">
+              DA
+            </div>
+            <div>
+              <p class="text-sm font-bold text-slate-900">dr. Dian Anggraini</p>
+              <p class="text-xs text-slate-500">Perumahan Grand Residence</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "Paling suka karena tepat waktu. Pesan via web jam 9 pagi, jam 10.30 teknisi AC sudah datang berseragam rapi, bawa alas kerja, dan tidak bikin kotor lantai ruangan keluarga."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-cyan-200 text-cyan-800 font-bold flex items-center justify-center text-sm">
+              BP
+            </div>
+            <div>
+              <p class="text-sm font-bold text-slate-900">Bambang Prakoso</p>
+              <p class="text-xs text-slate-500">Apartemen Sudirman Park</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "Anak saya punya alergi debu. Setelah kasur disedot pakai hydro vacuum KlinKilat, air tampungannya keruh banget. Sekarang tidur jadi nyenyak tanpa bersin lagi. Recommended!"
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-200/80 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 font-bold flex items-center justify-center text-sm">
+              RN
+            </div>
+            <div>
+              <p class="text-sm font-bold text-slate-900">Rina Nurhaliza</p>
+              <p class="text-xs text-slate-500">Ibu Rumah Tangga, Jakarta Selatan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FORM PEMESANAN / KONTAK (INTERAKTIF DISPLAY) -->
+  <section id="pesan" class="py-20 bg-slate-100 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200">
+        <div class="text-center max-w-xl mx-auto mb-10 space-y-2">
+          <span class="text-sky-600 font-bold text-xs uppercase tracking-wider">Formulir Reservasi Cepat</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Jadwalkan Kunjungan Teknisi</h2>
+          <p class="text-sm text-slate-600">
+            Isi formulir di bawah ini. Tim customer service kami akan menghubungi Anda via WhatsApp dalam 10 menit untuk konfirmasi jadwal.
+          </p>
+        </div>
+
+        <form onsubmit="return false;" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="name" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Nama Lengkap</label>
+              <input type="text" id="name" placeholder="Contoh: Muhammad Rian" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition">
+            </div>
+            <div class="space-y-2">
+              <label for="wa" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Nomor WhatsApp Aktif</label>
+              <input type="tel" id="wa" placeholder="0812-XXXX-XXXX" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="service" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Pilih Layanan Utama</label>
+              <select id="service" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none bg-white transition">
+                <option value="">-- Pilih Jenis Servis --</option>
+                <option value="ac">Servis & Cuci AC</option>
+                <option value="cleaning">Deep Cleaning Rumah / Kos</option>
+                <option value="vacuum">Sedot Tungau Kasur / Sofa</option>
+                <option value="plumbing">Perbaikan Pipa & Listrik</option>
+                <option value="paket">Paket Bundling Komplit Rumah Sehat</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label for="date" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Tanggal & Waktu Diinginkan</label>
+              <input type="date" id="date" class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition">
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <label for="address" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">Alamat Lengkap & Patokan</label>
+            <textarea id="address" rows="3" placeholder="Tuliskan nama jalan, nomor rumah/unit, RT/RW, dan patokan terdekat..." class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none transition"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl text-white font-bold text-sm bg-sky-600 hover:bg-sky-700 shadow-lg shadow-sky-200 transition duration-200 flex items-center justify-center gap-2">
+            <span>Kirim Permintaan Layanan</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+          <p class="text-center text-xs text-slate-400">Pembayaran dapat dilakukan setelah seluruh pekerjaan selesai diperiksa.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-white">
+            <div class="w-8 h-8 rounded-lg bg-sky-600 flex items-center justify-center font-bold text-sm">
+              K
+            </div>
+            <span class="text-xl font-bold">Klin<span class="text-sky-500">Kilat</span></span>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-400">
+            Platform penyedia jasa perawatan dan kebersihan hunian profesional dengan teknisi terlatih, harga pasti, dan jaminan pengerjaan tuntas.
+          </p>
+          <div class="text-xs space-y-1 text-slate-400">
+            <p>Operasional: Setiap Hari (07.30 - 20.00 WITA)</p>
+            <p>Hotline CS: (021) 555-8901 / 0811-4433-221</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-sm font-semibold text-white tracking-wider uppercase">Menu Cepat</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#beranda" class="hover:text-white transition-colors">Beranda</a></li>
+            <li><a href="#tentang" class="hover:text-white transition-colors">Tentang Kami</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Daftar Harga</a></li>
+            <li><a href="#testimoni" class="hover:text-white transition-colors">Testimoni Klien</a></li>
+            <li><a href="#pesan" class="hover:text-white transition-colors">Pesan Teknisi</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="text-sm font-semibold text-white tracking-wider uppercase">Layanan Populer</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#layanan" class="hover:text-white transition-colors">Pembersihan Kamar Mandi</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Cuci AC & Tambah Freon</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Sedot Tungau Springbed</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Instalasi Pipa & Kran Air</a></li>
+            <li><a href="#layanan" class="hover:text-white transition-colors">Perbaikan Kelistrikan Rumah</a></li>
+          </ul>
+        </div>
+
+            <div class="space-y-3">
+            <h4 class="text-sm font-semibold text-white tracking-wider uppercase">Terhubung Dengan Kami</h4>
+            <p class="text-xs text-slate-400">Ikuti tips merawat rumah praktis di media sosial resmi kami:</p>
+            <div class="flex gap-3 text-slate-300">
+            <a href="#" aria-label="Instagram KlinKilat" class="w-8 h-8 rounded-lg overflow-hidden hover:opacity-80 transition-opacity">
+              <img src="ig.jpg" alt="Logo Instagram" class="w-full h-full object-cover">
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-sky-600 hover:text-white flex items-center justify-center transition-colors text-xs font-bold">FB</a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-sky-600 hover:text-white flex items-center justify-center transition-colors text-xs font-bold">YT</a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-sky-600 hover:text-white flex items-center justify-center transition-colors text-xs font-bold">WA</a>
+            </div>
+                <div class="pt-2 text-xs text-slate-500">
+                <p>PT Klin Kilat Nusantara Sejahtera</p>
+                <p>Terdaftar Kemenkumham RI</p>
+                </div>
+            </div>
+        </div>
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+            <p>&copy; 2026 KlinKilat Solusi Rumah. Seluruh hak cipta dilindungi undang-undang.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-slate-400 transition-colors">Kebijakan Privasi</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Syarat & Ketentuan</a>
+                <a href="#" class="hover:text-slate-400 transition-colors">Pusat Bantuan</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

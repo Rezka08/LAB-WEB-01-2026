@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Tim</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: "class" };</script>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  <div class="fixed right-4 top-4 z-[60] flex items-center gap-2">
+  <button id="tombol-tema" type="button" aria-label="Ganti mode gelap" aria-pressed="false"
+          class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-900 shadow dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100">
+    <svg class="h-4 w-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+    <svg class="hidden h-4 w-4 dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/>
+      <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+  </button>
+  <button id="tombol-menu" type="button" disabled aria-expanded="false" aria-controls="overlay-menu"
+          class="flex items-center gap-2 rounded-full border border-gray-300 bg-white py-2 pl-4 pr-3 text-sm font-medium text-gray-900 shadow disabled:opacity-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100">
+    <span id="teks-menu">Menu</span>
+    <svg id="ikon-menu" class="h-4 w-4 transition-transform duration-500" viewBox="0 0 16 16" fill="none">
+      <path d="M8 1V15M1 8H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </button>
+  </div>
+
+  <main class="mx-auto max-w-2xl p-4 pt-6">
+    <h1 class="mb-1 text-2xl font-bold">Tugas Tim</h1>
+    <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">Klik nama anggota untuk melihat tugasnya. Menu di kanan atas juga bisa dipakai.</p>
+    <h2 class="mb-2 font-semibold">Anggota Tim</h2>
+    <p id="status-anggota" class="text-sm text-gray-500 dark:text-gray-400"></p>
+    <p id="error-anggota" class="mb-2 text-sm text-red-600 dark:text-red-400"></p>
+    <div id="anggota-halaman" class="mb-4 flex flex-wrap gap-2"></div>
+
+    <div class="rounded bg-white p-4 dark:bg-gray-800">
+      <h2 id="judul-tugas" class="mb-2 font-semibold">Tugas</h2>
+      <p id="info-awal" class="text-sm text-gray-500 dark:text-gray-400">Belum ada anggota yang dipilih.</p>
+      <p id="status-tugas" class="text-sm text-gray-500 dark:text-gray-400"></p>
+      <p id="error-tugas" class="text-sm text-red-600 dark:text-red-400"></p>
+
+      <div id="isi-tugas" class="hidden">
+        <p id="ringkasan" class="mb-2 text-sm font-medium"></p>
+        <input id="input-cari" type="text" placeholder="Cari tugas..." class="mb-2 w-full rounded border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 px-3 py-2 text-sm">
+        <div class="rounded-lg border bg-white shadow-md dark:border-gray-700 dark:bg-gray-800">
+          <div class="max-h-[400px] overflow-auto">
+            <table class="w-full min-w-[560px] text-sm">
+              <thead class="sticky top-0 z-10 bg-white shadow-sm dark:bg-gray-800">
+                <tr class="border-b dark:border-gray-700">
+                  <th class="h-12 w-12 px-4 text-left font-medium text-gray-500 dark:text-gray-400">No</th>
+                  <th class="h-12 px-4 text-left font-medium text-gray-500 dark:text-gray-400">Judul tugas</th>
+                  <th class="h-12 px-4 text-left font-medium text-gray-500 dark:text-gray-400">Status</th>
+                  <th class="h-12 px-4 text-center font-medium text-gray-500 dark:text-gray-400">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="daftar-tugas"></tbody>
+              <tfoot class="sticky bottom-0 z-10 border-t bg-gray-50 shadow-inner dark:border-gray-700 dark:bg-gray-900">
+                <tr>
+                  <td id="total-tugas" colspan="4" class="px-4 py-3 font-medium"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <p id="pesan-kosong" class="py-2 text-sm text-gray-500 dark:text-gray-400"></p>
+
+        <form id="form-tugas" class="mt-4 border-t pt-4 dark:border-gray-700">
+          <div class="flex gap-2">
+            <input id="input-judul" type="text" placeholder="Judul tugas baru" class="flex-1 rounded border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-400 px-3 py-2 text-sm">
+            <button id="tombol-simpan" type="submit" class="rounded bg-indigo-600 px-4 py-2 text-sm text-white disabled:opacity-50">Simpan</button>
+          </div>
+          <p id="error-form" class="mt-1 text-sm text-red-600 dark:text-red-400"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div id="overlay-menu" class="invisible fixed inset-0 z-50 overflow-hidden opacity-0 transition-all duration-300">
+    <div class="panel-menu absolute inset-0 translate-x-full bg-indigo-500 transition-transform duration-[575ms] ease-[cubic-bezier(0.65,0.01,0.05,0.99)]"></div>
+    <div class="panel-menu absolute inset-0 translate-x-full bg-neutral-800 transition-transform duration-[575ms] ease-[cubic-bezier(0.65,0.01,0.05,0.99)]"></div>
+    <div class="panel-menu absolute inset-0 translate-x-full bg-[#131313] transition-transform duration-[575ms] ease-[cubic-bezier(0.65,0.01,0.05,0.99)]"></div>
+
+    <div class="pointer-events-none absolute inset-0">
+      <svg class="bentuk absolute inset-0 m-auto h-full w-full max-w-3xl scale-75 opacity-0 transition-all duration-500" viewBox="0 0 400 400" fill="none">
+        <circle cx="80" cy="120" r="40" fill="rgba(99,102,241,0.15)"/>
+        <circle cx="300" cy="80" r="60" fill="rgba(139,92,246,0.12)"/>
+        <circle cx="200" cy="300" r="80" fill="rgba(236,72,153,0.1)"/>
+        <circle cx="350" cy="280" r="30" fill="rgba(99,102,241,0.15)"/>
+      </svg>
+      <svg class="bentuk absolute inset-0 m-auto h-full w-full max-w-3xl scale-75 opacity-0 transition-all duration-500" viewBox="0 0 400 400" fill="none">
+        <path d="M0 200 Q100 100, 200 200 T 400 200" stroke="rgba(99,102,241,0.2)" stroke-width="60" fill="none"/>
+        <path d="M0 280 Q100 180, 200 280 T 400 280" stroke="rgba(139,92,246,0.15)" stroke-width="40" fill="none"/>
+      </svg>
+      <svg class="bentuk absolute inset-0 m-auto h-full w-full max-w-3xl scale-75 opacity-0 transition-all duration-500" viewBox="0 0 400 400" fill="none">
+        <circle cx="50" cy="50" r="8" fill="rgba(99,102,241,0.3)"/>
+        <circle cx="150" cy="50" r="8" fill="rgba(139,92,246,0.3)"/>
+        <circle cx="250" cy="50" r="8" fill="rgba(236,72,153,0.3)"/>
+        <circle cx="350" cy="50" r="8" fill="rgba(99,102,241,0.3)"/>
+        <circle cx="100" cy="150" r="12" fill="rgba(139,92,246,0.25)"/>
+        <circle cx="200" cy="150" r="12" fill="rgba(236,72,153,0.25)"/>
+        <circle cx="300" cy="150" r="12" fill="rgba(99,102,241,0.25)"/>
+        <circle cx="50" cy="250" r="10" fill="rgba(236,72,153,0.3)"/>
+        <circle cx="150" cy="250" r="10" fill="rgba(99,102,241,0.3)"/>
+        <circle cx="250" cy="250" r="10" fill="rgba(139,92,246,0.3)"/>
+        <circle cx="350" cy="250" r="10" fill="rgba(236,72,153,0.3)"/>
+        <circle cx="100" cy="350" r="6" fill="rgba(99,102,241,0.3)"/>
+        <circle cx="200" cy="350" r="6" fill="rgba(139,92,246,0.3)"/>
+        <circle cx="300" cy="350" r="6" fill="rgba(236,72,153,0.3)"/>
+      </svg>
+      <svg class="bentuk absolute inset-0 m-auto h-full w-full max-w-3xl scale-75 opacity-0 transition-all duration-500" viewBox="0 0 400 400" fill="none">
+        <path d="M100 100 Q150 50, 200 100 Q250 150, 200 200 Q150 250, 100 200 Q50 150, 100 100" fill="rgba(99,102,241,0.12)"/>
+        <path d="M250 200 Q300 150, 350 200 Q400 250, 350 300 Q300 350, 250 300 Q200 250, 250 200" fill="rgba(236,72,153,0.1)"/>
+      </svg>
+      <svg class="bentuk absolute inset-0 m-auto h-full w-full max-w-3xl scale-75 opacity-0 transition-all duration-500" viewBox="0 0 400 400" fill="none">
+        <line x1="0" y1="100" x2="300" y2="400" stroke="rgba(99,102,241,0.15)" stroke-width="30"/>
+        <line x1="100" y1="0" x2="400" y2="300" stroke="rgba(139,92,246,0.12)" stroke-width="25"/>
+        <line x1="200" y1="0" x2="400" y2="200" stroke="rgba(236,72,153,0.1)" stroke-width="20"/>
+      </svg>
+    </div>
+
+    <nav class="relative z-10 flex h-full flex-col justify-center overflow-y-auto px-8 py-24 md:px-20">
+      <p class="mb-6 text-sm uppercase tracking-widest text-neutral-400">Anggota tim</p>
+      <ul id="daftar-anggota" class="grid gap-x-12 md:grid-cols-2"></ul>
+    </nav>
+  </div>
+
+  <dialog id="dialog-detail" class="m-auto w-full max-w-lg rounded-lg border bg-white p-6 text-gray-800 shadow-lg backdrop:bg-black/80 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100">
+    <h3 class="text-lg font-semibold">Detail Tugas</h3>
+    <p class="mb-4 text-sm text-gray-500 dark:text-gray-400">Informasi lengkap tentang tugas ini.</p>
+    <div class="space-y-2 text-sm">
+      <p><strong>Judul:</strong> <span id="detail-judul"></span></p>
+      <p><strong>Anggota:</strong> <span id="detail-anggota"></span></p>
+      <p><strong>Status:</strong> <span id="detail-status"></span></p>
+    </div>
+    <div class="mt-5 text-right">
+      <button id="tombol-tutup-detail" type="button" class="rounded border px-3 py-2 text-sm hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700">Tutup</button>
+    </div>
+  </dialog>
+
+  <div id="notifikasi" class="fixed bottom-4 right-4 z-[70] hidden rounded bg-green-600 px-4 py-2 text-sm text-white"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
