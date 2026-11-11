@@ -1,0 +1,16 @@
+@import "tailwindcss";
+:root { --paper: #fbf8f2; --ink: #493326; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+.container-shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.font-serif { font-family: Georgia, 'Times New Roman', serif; }
+.eyebrow { font-size: 10px; font-weight: 800; letter-spacing: .22em; color: #a17d5d; }
+.section-title { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.08; letter-spacing: -.035em; color: #493326; }
+.hero-pattern { background-image: radial-gradient(circle at 85% 15%, rgba(229,196,159,.12) 0 2px, transparent 3px), linear-gradient(135deg, #493326, #624631 60%, #39271f); background-size: 28px 28px, auto; }
+.stat-card { border: 1px solid #e8ddcf; border-radius: 24px; background: #fffdf9; padding: 24px; }
+.field-label { display: flex; flex-direction: column; gap: 9px; color: #5d4939; font-size: 13px; font-weight: 700; }
+.field-input { width: 100%; border: 1px solid #e6dbce; border-radius: 13px; background: #fcfaf6; padding: 13px 15px; color: #493326; font-size: 14px; font-weight: 400; outline: none; transition: border-color .2s, box-shadow .2s; }
+.field-input:focus { border-color: #a47a56; box-shadow: 0 0 0 3px rgba(164,122,86,.13); }
+.field-input::placeholder { color: #b1a294; }
+@media (max-width: 640px) { .container-shell { width: min(100% - 28px, 1120px); } }

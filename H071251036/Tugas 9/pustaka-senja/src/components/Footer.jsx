@@ -1,0 +1,4 @@
+import Link from "next/link";
+export default function Footer() {
+  return <footer className="mt-20 bg-[#38271f] text-[#e9dccb]"><div className="container-shell grid gap-8 py-10 sm:grid-cols-[1fr_auto] sm:items-end"><div><p className="font-serif text-2xl font-bold">Pustaka Senja<span className="text-[#c89563]">.</span></p><p className="mt-2 max-w-md text-sm leading-6 text-[#c4b3a2]">Tempat kecil untuk menemukan cerita besar. Baca, bertumbuh, dan beristirahat sejenak.</p></div><div className="flex gap-5 text-sm text-[#d8c8b6]"><Link href="/katalog" className="hover:text-white">Katalog</Link><Link href="/usulan" className="hover:text-white">Usulkan buku</Link></div></div><div className="border-t border-white/10 py-4 text-center text-xs text-[#a99582]">© {new Date().getFullYear()} Pustaka Senja · Dibuat untuk para pencinta cerita.</div></footer>;
+}
